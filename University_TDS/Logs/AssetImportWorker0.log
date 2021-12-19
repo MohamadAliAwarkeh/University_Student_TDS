@@ -1,0 +1,1063 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.19f1 (68f137dc9bbe) revision 6877495'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1415; Version 2009; 64bit' Language: 'en' Physical Memory: 16261 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+E:\Unity\2020.3.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/University_TDS
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49263
+Successfully changed project path to: E:/University_TDS
+E:/University_TDS
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 38.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.19f1 (68f137dc9bbe)
+[Subsystems] Discovering subsystems at path E:/Unity/2020.3.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/University_TDS/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   
+    VRAM:     8088 MB
+    Driver:   30.0.14.7212
+Initialize mono
+Mono path[0] = 'E:/Unity/2020.3.19f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/2020.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Unity/2020.3.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity/2020.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001393 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 37.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.852 seconds
+Domain Reload Profiling:
+	ReloadAssembly (852ms)
+		BeginReloadAssembly (62ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (357ms)
+			LoadAssemblies (61ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (134ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (147ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (37ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (69ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004034 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.993 seconds
+Domain Reload Profiling:
+	ReloadAssembly (994ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (794ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (267ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (292ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (45ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.1 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2535.
+Total: 2.409600 ms (FindLiveObjects: 0.174400 ms CreateObjectMapping: 0.070800 ms MarkObjects: 2.109900 ms  DeleteObjects: 0.053700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Uni_Excersizes/Completed
+  artifactKey: Guid(23e8f288a46c8204f83df44619bfef1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Uni_Excersizes/Completed using Guid(23e8f288a46c8204f83df44619bfef1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a139786bf3b0b0de49555950afb1c8a1') in 0.005629 seconds 
+  Import took 0.008199 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.812295 seconds.
+  path: Assets/Uni_Excersizes/Completed/Scenes/SampleScene.unity
+  artifactKey: Guid(feb211f274682594c838d32282e8d8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Uni_Excersizes/Completed/Scenes/SampleScene.unity using Guid(feb211f274682594c838d32282e8d8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd2f46746fb8e50b1d4f088a293a5b8') in 0.011296 seconds 
+  Import took 0.017651 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004844 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.368 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1369ms)
+		BeginReloadAssembly (161ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (1131ms)
+			LoadAssemblies (146ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (495ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (312ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (215ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2085 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.6 MB.
+System memory in use after: 92.7 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2537.
+Total: 2.691100 ms (FindLiveObjects: 0.186700 ms CreateObjectMapping: 0.086400 ms MarkObjects: 2.395400 ms  DeleteObjects: 0.021700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004130 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.920 seconds
+Domain Reload Profiling:
+	ReloadAssembly (920ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (743ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (277ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (242ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (167ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.5 MB.
+System memory in use after: 92.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2536.
+Total: 2.418100 ms (FindLiveObjects: 0.196000 ms CreateObjectMapping: 0.071600 ms MarkObjects: 2.132200 ms  DeleteObjects: 0.017400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004308 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.961 seconds
+Domain Reload Profiling:
+	ReloadAssembly (961ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (788ms)
+			LoadAssemblies (119ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (287ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (258ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2081 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.6 MB.
+System memory in use after: 92.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2539.
+Total: 2.923200 ms (FindLiveObjects: 0.182000 ms CreateObjectMapping: 0.074800 ms MarkObjects: 2.642400 ms  DeleteObjects: 0.022900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 235.944340 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/crateWood.png
+  artifactKey: Guid(a090f07329dff0b44922dc643bba4251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/crateWood.png using Guid(a090f07329dff0b44922dc643bba4251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '103ed6d08d57d574a95bd3bbbefd1e1f') in 0.118930 seconds 
+  Import took 0.121822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.497306 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/crateWood_side.png
+  artifactKey: Guid(620a1dd8b7689e44f9043d6d6c605bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/crateWood_side.png using Guid(620a1dd8b7689e44f9043d6d6c605bdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c5f9f4d0686a46485ed3463bc61e7ab') in 0.012135 seconds 
+  Import took 0.014967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.374799 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/oilSpill_large.png
+  artifactKey: Guid(5b64ca27a79c9464b8982da459367f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/oilSpill_large.png using Guid(5b64ca27a79c9464b8982da459367f2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a363e90562885182423670d72a98645') in 0.013594 seconds 
+  Import took 0.018066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.396664 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/sandbagBeige.png
+  artifactKey: Guid(8e52bc33c57e93c4a873ac60422cb13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/sandbagBeige.png using Guid(8e52bc33c57e93c4a873ac60422cb13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd79135e4812520cfdbe5e05bc9f50a') in 0.017257 seconds 
+  Import took 0.020436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.830719 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/specialBarrel3_outline.png
+  artifactKey: Guid(c2d52804156a53946a75bce61e467276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/specialBarrel3_outline.png using Guid(c2d52804156a53946a75bce61e467276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53389a5caa6633393eeca5dcce12bdac') in 0.015578 seconds 
+  Import took 0.018915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.679857 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/specialBarrel4_outline.png
+  artifactKey: Guid(b5b1cdc0f6bf36a4cb8aac93194bccaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/specialBarrel4_outline.png using Guid(b5b1cdc0f6bf36a4cb8aac93194bccaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8446ebfad9e739deea80f1a64ca4ae41') in 0.017530 seconds 
+  Import took 0.020768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.529504 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG
+  artifactKey: Guid(94ecd8f4a12a0d84bad8dd675af89b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG using Guid(94ecd8f4a12a0d84bad8dd675af89b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637c12310b01a5eae55160f1a47a36dc') in 0.004537 seconds 
+  Import took 0.007580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.789134 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size
+  artifactKey: Guid(9b42901b6a126584aafaf6a36aa19873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size using Guid(9b42901b6a126584aafaf6a36aa19873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b54e125ad130c5554bcb89769df4625e') in 0.004647 seconds 
+  Import took 0.007606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.042564 seconds.
+  path: Assets/kenney_topdownTanksRedux/Spritesheet
+  artifactKey: Guid(31686470bee48f5418fc8a31482344c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Spritesheet using Guid(31686470bee48f5418fc8a31482344c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693918192acaaa6d2eaccdfb1c4241a7') in 0.004498 seconds 
+  Import took 0.007256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.443043 seconds.
+  path: Assets/kenney_topdownTanksRedux/Tilesheet
+  artifactKey: Guid(4670b15fce516964fb4cb078ff2ab1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Tilesheet using Guid(4670b15fce516964fb4cb078ff2ab1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536d81e9261b8e5fb516eaced7567b40') in 0.009319 seconds 
+  Import took 0.011952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.462479 seconds.
+  path: Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_default.png
+  artifactKey: Guid(a1a787d2ddcede44295e5a5619229e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_default.png using Guid(a1a787d2ddcede44295e5a5619229e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8bac6de0b743429a03e735de83fe23') in 0.014804 seconds 
+  Import took 0.018325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.659983 seconds.
+  path: Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_retina.png
+  artifactKey: Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_retina.png using Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c87cdf06ca73be345461dd6cbec93010') in 0.014862 seconds 
+  Import took 0.018686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.862535 seconds.
+  path: Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_default.png
+  artifactKey: Guid(bcd2310148b77454ab326bc259ef4d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_default.png using Guid(bcd2310148b77454ab326bc259ef4d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1283e9c80aa5be72f9b82e27e0566fcb') in 0.018039 seconds 
+  Import took 0.021394 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.395959 seconds.
+  path: Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_default.xml
+  artifactKey: Guid(4a4422c93c602db42a5fbb576c69f079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_default.xml using Guid(4a4422c93c602db42a5fbb576c69f079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8eaed670a3bb96072f8bc7723a1bc6e') in 0.022939 seconds 
+  Import took 0.025681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.153804 seconds.
+  path: Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_retina.png
+  artifactKey: Guid(f1be0c7980f376d4bbcea2b4ff53d0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_retina.png using Guid(f1be0c7980f376d4bbcea2b4ff53d0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65224796c3ea2fc2324fc893be7e5aa8') in 0.019641 seconds 
+  Import took 0.022340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.290971 seconds.
+  path: Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_retina.xml
+  artifactKey: Guid(801b26d78fb0a1d42addb0094aac6f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Spritesheet/allSprites_retina.xml using Guid(801b26d78fb0a1d42addb0094aac6f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b588a96395728626098bbdee32c2794c') in 0.005112 seconds 
+  Import took 0.007940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.178992 seconds.
+  path: Assets/kenney_topdownTanksRedux/Spritesheet/onlyObjects_default.png
+  artifactKey: Guid(740bb81ca6968af4e91582ba8e95cb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Spritesheet/onlyObjects_default.png using Guid(740bb81ca6968af4e91582ba8e95cb0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d6076bd540539aaf21d4e9eabab273e') in 0.020547 seconds 
+  Import took 0.023588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.798836 seconds.
+  path: Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_retina.png
+  artifactKey: Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_retina.png using Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd6d2fd3d4111d89ae387f271dee768f') in 0.009468 seconds 
+  Import took 0.012792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.838111 seconds.
+  path: Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_retina.png
+  artifactKey: Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Tilesheet/terrainTiles_retina.png using Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15bea6f4051e5e42ec2c3a8671c20116') in 0.425477 seconds 
+  Import took 0.428890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.000065 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.004955 seconds 
+  Import took 0.008021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.477312 seconds.
+  path: Assets/2D Assets
+  artifactKey: Guid(48b063bc564e46d4c95167897bbf7620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets using Guid(48b063bc564e46d4c95167897bbf7620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29b022a17e13b73eaaed2e3071236bbf') in 0.004126 seconds 
+  Import took 0.007447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.769032 seconds.
+  path: Assets/kenney_topdownTanksRedux/Tilesheet/TerrainTiles.png
+  artifactKey: Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Tilesheet/TerrainTiles.png using Guid(c4e1888bda654774b8b00859d235c7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98e50787e7dd27b4d4ec5eb48a20a29') in 0.319166 seconds 
+  Import took 0.322959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.069691 seconds.
+  path: Assets/2D Assets/Environment
+  artifactKey: Guid(314784537dc645b43b357385e1059f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Environment using Guid(314784537dc645b43b357385e1059f5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a476c2e9a77421a9d4e1821f87a7201c') in 0.004196 seconds 
+  Import took 0.007149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.142999 seconds.
+  path: Assets/kenney_topdownTanksRedux/Vector
+  artifactKey: Guid(a763e107af70fc949b6a500ca7b6dfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/Vector using Guid(a763e107af70fc949b6a500ca7b6dfbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79582c5cef27cce9494e1add5b8375e') in 0.004127 seconds 
+  Import took 0.007258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.879653 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barrelGreen_top.png
+  artifactKey: Guid(210b821481d8ba042b669522756654af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barrelGreen_top.png using Guid(210b821481d8ba042b669522756654af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7a573060c0bf923be77b5942cd1988f') in 0.013013 seconds 
+  Import took 0.016057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.378855 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barrelRust_side.png
+  artifactKey: Guid(80a5d1cb1d839a24b895cbcde52b4421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barrelRust_side.png using Guid(80a5d1cb1d839a24b895cbcde52b4421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1d4b7cb70b97ed3b0b8644df22a270') in 0.015040 seconds 
+  Import took 0.017884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.414108 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue1.png
+  artifactKey: Guid(1de154cdc97145045b04cd12029860b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue1.png using Guid(1de154cdc97145045b04cd12029860b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4cf07ce941a34d726523c7b69865a33') in 0.012119 seconds 
+  Import took 0.015671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.184537 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue1_outline.png
+  artifactKey: Guid(88ebfffa23c459840b973d279ea38207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue1_outline.png using Guid(88ebfffa23c459840b973d279ea38207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4f894cfce68cf5a5ad147c786cb7d4') in 0.013183 seconds 
+  Import took 0.016484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.101309 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue2.png
+  artifactKey: Guid(cbe907b72edc76f4d89578a2f3db7a2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue2.png using Guid(cbe907b72edc76f4d89578a2f3db7a2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb2fd1832320f825cded2ee2bfd02583') in 0.011947 seconds 
+  Import took 0.014920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.301891 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue2_outline.png
+  artifactKey: Guid(347e840ba5e3a02449ef03e90a049a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue2_outline.png using Guid(347e840ba5e3a02449ef03e90a049a6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1312032ddd9e1e458c4f84883baadf') in 0.012144 seconds 
+  Import took 0.016003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.541617 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue3.png
+  artifactKey: Guid(d9c2590265f1be1449a117f6ea1364e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue3.png using Guid(d9c2590265f1be1449a117f6ea1364e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db8304d8b38964b2329865d61c0dba1') in 0.012170 seconds 
+  Import took 0.015036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.164423 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue3_outline.png
+  artifactKey: Guid(632f35e93796a9f479c673d40fd8c4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletBlue3_outline.png using Guid(632f35e93796a9f479c673d40fd8c4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3afcf36095c2709ce449e5f9c1019d25') in 0.012323 seconds 
+  Import took 0.015461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.351069 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletDark1.png
+  artifactKey: Guid(7b597b0234e9aff4f9674b9276847018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletDark1.png using Guid(7b597b0234e9aff4f9674b9276847018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8342226a4f8f83d7843f70b04895e757') in 0.011210 seconds 
+  Import took 0.014162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.141841 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/bulletDark1_outline.png
+  artifactKey: Guid(1f4a809d01b3ae04eaae50fcb8a7e32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/bulletDark1_outline.png using Guid(1f4a809d01b3ae04eaae50fcb8a7e32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3345434c9aa5c68d61a128864b062a7e') in 0.017000 seconds 
+  Import took 0.019841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.447640 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barricadeWood.png
+  artifactKey: Guid(31cdf6f3a113c5d4ebaed1f511654f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barricadeWood.png using Guid(31cdf6f3a113c5d4ebaed1f511654f5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2504c5118d840223a84940d33951716d') in 0.012759 seconds 
+  Import took 0.015593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.838911 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barricadeMetal.png
+  artifactKey: Guid(e17598296df3cbd45a17a32aadb5cc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barricadeMetal.png using Guid(e17598296df3cbd45a17a32aadb5cc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e757bf56b90add8d9aa3c6c40926f37d') in 0.014909 seconds 
+  Import took 0.018003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.977881 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barrelRust_top.png
+  artifactKey: Guid(69da06cb48d023f4c93d3f50edf54a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barrelRust_top.png using Guid(69da06cb48d023f4c93d3f50edf54a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '138c27cd341dc0286d927aa8c826c90c') in 0.015639 seconds 
+  Import took 0.018575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.290061 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barrelBlack_side.png
+  artifactKey: Guid(f7edbf663b1f17c4db391f6febc7034a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barrelBlack_side.png using Guid(f7edbf663b1f17c4db391f6febc7034a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3d815737edec52f81d450cf7c10333') in 0.011437 seconds 
+  Import took 0.014435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.036130 seconds.
+  path: Assets/2D Assets/Objects
+  artifactKey: Guid(49f8eb7b4825b90439a4ddf3077b537a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Objects using Guid(49f8eb7b4825b90439a4ddf3077b537a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b021a07a8904f8abe23c4c9dc5a1923') in 0.004151 seconds 
+  Import took 0.007201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.196025 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/barrelBlack_top.png
+  artifactKey: Guid(1ca9c73feddbb33439a2fe94f72638b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/barrelBlack_top.png using Guid(1ca9c73feddbb33439a2fe94f72638b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23225853167c69ff8c022202ff5463b6') in 0.012420 seconds 
+  Import took 0.015603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.990142 seconds.
+  path: Assets/2D Assets/Bullets
+  artifactKey: Guid(82645fdcf94a1134e97d21c7eef7143d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Bullets using Guid(82645fdcf94a1134e97d21c7eef7143d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a40b9948f2742f0c9bf51040f25dba25') in 0.005028 seconds 
+  Import took 0.008174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.263588 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/crateMetal_side.png
+  artifactKey: Guid(76a1ac723f7100a45a94de9fc4449165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/crateMetal_side.png using Guid(76a1ac723f7100a45a94de9fc4449165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc3e74218c281488d85c889f5b122a8') in 0.012878 seconds 
+  Import took 0.016131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.334338 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/fenceRed.png
+  artifactKey: Guid(a884e2293c3181841b82818bcfc3c7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/fenceRed.png using Guid(a884e2293c3181841b82818bcfc3c7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26ee2c5188c97957297058f669a2664e') in 0.012306 seconds 
+  Import took 0.015513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.952792 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/fenceYellow.png
+  artifactKey: Guid(253288ccaf8998e49a2f9d5e1a15cea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/fenceYellow.png using Guid(253288ccaf8998e49a2f9d5e1a15cea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e8a351a48195f7e7a58af4bbb7f07c') in 0.014925 seconds 
+  Import took 0.017769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.196857 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/oilSpill_large.png
+  artifactKey: Guid(bf35278eded6b0e418087eab49909688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/oilSpill_large.png using Guid(bf35278eded6b0e418087eab49909688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd84ff8c9aa6769c47065a76c2d18fa9c') in 0.013773 seconds 
+  Import took 0.016981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.470860 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/oilSpill_small.png
+  artifactKey: Guid(d3e24cc6a95a9d24190954ee5c95f873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/oilSpill_small.png using Guid(d3e24cc6a95a9d24190954ee5c95f873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80797c9bfdd64a33bb80bdf8f0788987') in 0.011808 seconds 
+  Import took 0.014824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.182578 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBeige.png
+  artifactKey: Guid(c861b4446621fdf40bd8440522c5c784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBeige.png using Guid(c861b4446621fdf40bd8440522c5c784) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d2d3a5cfdd2770f031b170848973a9') in 0.012101 seconds 
+  Import took 0.015325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.388602 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBeige_open.png
+  artifactKey: Guid(c851df8976294a248aa4c196de4cf71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBeige_open.png using Guid(c851df8976294a248aa4c196de4cf71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05b3e010d61b4f8f2bbdf0dbe4e69f7a') in 0.019661 seconds 
+  Import took 0.022395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.664780 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBrown.png
+  artifactKey: Guid(2f9f7978d32af0b4d9706fbd44d5aa5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBrown.png using Guid(2f9f7978d32af0b4d9706fbd44d5aa5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0960fc58126d019e93fd8659c8c96d74') in 0.012903 seconds 
+  Import took 0.015750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.392764 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBrown_open.png
+  artifactKey: Guid(e486ed03ae7a42d468192d40913aa5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/sandbagBrown_open.png using Guid(e486ed03ae7a42d468192d40913aa5a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6158a50fc20b831fafbc46b8b85ba39a') in 0.012409 seconds 
+  Import took 0.015299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.273492 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/shotLarge.png
+  artifactKey: Guid(4402d3a33dd754643944085e0de82359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/shotLarge.png using Guid(4402d3a33dd754643944085e0de82359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93cd0ea18d2d9dd6decdec0ba92c7624') in 0.016112 seconds 
+  Import took 0.019088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.252354 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/shotOrange.png
+  artifactKey: Guid(7597f8f8e26f73948b7b76beb3a57962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/shotOrange.png using Guid(7597f8f8e26f73948b7b76beb3a57962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01efd3c174c3b420817c0b7574f04ed6') in 0.011223 seconds 
+  Import took 0.014546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.330119 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/shotRed.png
+  artifactKey: Guid(1e0a5cdfe5aee7442a40f6aeaaea1fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/shotRed.png using Guid(1e0a5cdfe5aee7442a40f6aeaaea1fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cea28d9eefce9a6fdcdd284fdeb85d9') in 0.014083 seconds 
+  Import took 0.017179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.361847 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/shotThin.png
+  artifactKey: Guid(63057139f8ffb7f46a1024b56c05658c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/shotThin.png using Guid(63057139f8ffb7f46a1024b56c05658c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b65f8ea47c49dbe7c5f1267bc3720c5') in 0.012160 seconds 
+  Import took 0.015073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.194285 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/specialBarrel1.png
+  artifactKey: Guid(c35728f765350d94abae8d1c3676c1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/specialBarrel1.png using Guid(c35728f765350d94abae8d1c3676c1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b75d9af5d66157910fbbc77cbd182955') in 0.012777 seconds 
+  Import took 0.016445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.020827 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Retina/specialBarrel1_outline.png
+  artifactKey: Guid(1289c0d56c569b14c9ee208ed3c8cc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Retina/specialBarrel1_outline.png using Guid(1289c0d56c569b14c9ee208ed3c8cc23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1ef5f27cb1cf71164911aa03a5e6e1') in 0.011635 seconds 
+  Import took 0.014899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.692388 seconds.
+  path: Assets/kenney_topdownTanksRedux
+  artifactKey: Guid(f34f4c89f6a93724e8e7e4cd8c58370e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux using Guid(f34f4c89f6a93724e8e7e4cd8c58370e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb579d8db749d55f903dba1d29ae91c3') in 0.004369 seconds 
+  Import took 0.007881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.187734 seconds.
+  path: Assets/kenney_topdownTanksRedux/PNG/Default size/barrelBlack_side.png
+  artifactKey: Guid(6fc3814abf4cd2f42bcca311bf89e6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/kenney_topdownTanksRedux/PNG/Default size/barrelBlack_side.png using Guid(6fc3814abf4cd2f42bcca311bf89e6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '453d11cbddafc8c0e3ed153f22605065') in 0.012527 seconds 
+  Import took 0.015337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.498427 seconds.
+  path: Assets/2D Assets/Bullets/bulletGreen3.png
+  artifactKey: Guid(61525e53606dc1c4280eed0f4da4e9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Bullets/bulletGreen3.png using Guid(61525e53606dc1c4280eed0f4da4e9b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde4cde04766e2ab84778ad58806d059') in 0.014591 seconds 
+  Import took 0.017512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.993907 seconds.
+  path: Assets/2D Assets/Bullets/bulletSand3.png
+  artifactKey: Guid(9481d7c3b9b93104f9a64912f894d440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Bullets/bulletSand3.png using Guid(9481d7c3b9b93104f9a64912f894d440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841c508ed947e670a243edd7e7570660') in 0.011261 seconds 
+  Import took 0.014436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.071138 seconds.
+  path: Assets/2D Assets/Explosions
+  artifactKey: Guid(093564266837d4f418d670f3bda75825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Explosions using Guid(093564266837d4f418d670f3bda75825) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c46036c103bc48e63dd4f56c52de3d4') in 0.004596 seconds 
+  Import took 0.007360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.863945 seconds.
+  path: Assets/2D Assets/Tank
+  artifactKey: Guid(e9d1894185606f840ab1e5c488d8deee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Tank using Guid(e9d1894185606f840ab1e5c488d8deee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67fc135704e5593223ceb59a391a3471') in 0.004136 seconds 
+  Import took 0.007229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.802956 seconds.
+  path: Assets/2D Assets/Tank/Barrels
+  artifactKey: Guid(efc5921a1c8c53a429d5dd90a57238c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Tank/Barrels using Guid(efc5921a1c8c53a429d5dd90a57238c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84db9fe51d6935beb4d3934af0966fcc') in 0.004265 seconds 
+  Import took 0.007167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.263360 seconds.
+  path: Assets/2D Assets/Tank/Body
+  artifactKey: Guid(504c262693251db458194dd32d634e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Tank/Body using Guid(504c262693251db458194dd32d634e23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acac3a7554179ac3d9134dde75729b29') in 0.004609 seconds 
+  Import took 0.007364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 311.642168 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa27944bdea339c97c39027c7eea529c') in 0.004458 seconds 
+  Import took 0.007972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.154554 seconds.
+  path: Assets/Scenes/LevelOne.unity
+  artifactKey: Guid(6ce21d8b82e291b4a835f88374c64433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/LevelOne.unity using Guid(6ce21d8b82e291b4a835f88374c64433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c55e0b159776185d5abcbf6aefab39') in 0.004487 seconds 
+  Import took 0.007731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 147.531015 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_0.asset
+  artifactKey: Guid(b6ee3b4f0b40cea4489f7c55af2b82fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_0.asset using Guid(b6ee3b4f0b40cea4489f7c55af2b82fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf624eb0620b532440bab55a0d49f828') in 0.025910 seconds 
+  Import took 0.029988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.491028 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_1.asset
+  artifactKey: Guid(dfe212f587f20274aacdc81a28e2d5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_1.asset using Guid(dfe212f587f20274aacdc81a28e2d5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '132d67046b603a480584ed033d8da700') in 0.013536 seconds 
+  Import took 0.016399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.270676 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_2.asset
+  artifactKey: Guid(1a3a6d57dd59ca3418b6ac560f58ac16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_2.asset using Guid(1a3a6d57dd59ca3418b6ac560f58ac16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '812c7c611020856908d54c301f8d26a6') in 0.014425 seconds 
+  Import took 0.017680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.160912 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_3.asset
+  artifactKey: Guid(159a1dfb9308a6e4e80f05a3d5abc222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_3.asset using Guid(159a1dfb9308a6e4e80f05a3d5abc222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c13fef0d282308b3a4c93fd89d6229de') in 0.020646 seconds 
+  Import took 0.023717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.139502 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_4.asset
+  artifactKey: Guid(ad10ba318d6a42f448b26438098eeafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_4.asset using Guid(ad10ba318d6a42f448b26438098eeafb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd424de7db69cd6b4031490d821eb23') in 0.008928 seconds 
+  Import took 0.012465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.156628 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_5.asset
+  artifactKey: Guid(fb5645ddfa9af7f46a3020127ce387f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_5.asset using Guid(fb5645ddfa9af7f46a3020127ce387f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a4877ed75c23874147a0b16eabd5dd') in 0.013080 seconds 
+  Import took 0.015969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.148824 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_6.asset
+  artifactKey: Guid(39c0c8b2246fe6f469dc15623f5d65bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_6.asset using Guid(39c0c8b2246fe6f469dc15623f5d65bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e6b1669db2d5e3579b7218498ed71cc') in 0.018010 seconds 
+  Import took 0.020822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.143698 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_7.asset
+  artifactKey: Guid(9a6301f407a03274a8a9bdb0415eea15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_7.asset using Guid(9a6301f407a03274a8a9bdb0415eea15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9649e760be852c0269ed65a670a4213d') in 0.023779 seconds 
+  Import took 0.026792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.129322 seconds.
+  path: Assets/Tiles/TerrainTiles/terrainTiles_retina_8.asset
+  artifactKey: Guid(96469c45762b2ac499704360319c9a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/TerrainTiles/terrainTiles_retina_8.asset using Guid(96469c45762b2ac499704360319c9a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc8a0d37ea50c0abc6d02807f9293240') in 0.012254 seconds 
+  Import took 0.015307 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.840916 seconds.
+  path: Assets/Tiles
+  artifactKey: Guid(97f87ee68a1ee9949bbbe3b7bcdd605f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles using Guid(97f87ee68a1ee9949bbbe3b7bcdd605f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04d4053a07b4db9c3ab52e3dabc187ed') in 0.004603 seconds 
+  Import took 0.008233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.349130 seconds.
+  path: Assets/TilemapPalletes
+  artifactKey: Guid(8b324d805eddae347b954b768c329ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilemapPalletes using Guid(8b324d805eddae347b954b768c329ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5cd2f5390ccb0912de02eac77f19e8') in 0.004364 seconds 
+  Import took 0.007091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.531846 seconds.
+  path: Assets/TilemapPalletes/Terrain Tiles.prefab
+  artifactKey: Guid(928ec935b595d0949b4456d333247263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilemapPalletes/Terrain Tiles.prefab using Guid(928ec935b595d0949b4456d333247263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81a861858eb36220fa71eac98febd3a') in 0.036519 seconds 
+  Import took 0.039287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.537064 seconds.
+  path: Assets/2D Assets/World
+  artifactKey: Guid(8d4ddd2b374e1794ca7d57e98e9ce644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World using Guid(8d4ddd2b374e1794ca7d57e98e9ce644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a0fa963fbab56b324635c65bedfede') in 0.004551 seconds 
+  Import took 0.007448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.062216 seconds.
+  path: Assets/2D Assets/World/terrainTiles_default.png
+  artifactKey: Guid(080eeee755dce4649a818f70716f2f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/terrainTiles_default.png using Guid(080eeee755dce4649a818f70716f2f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8891d388cbbc670c9651207913a4cacf') in 0.011411 seconds 
+  Import took 0.014223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.512649 seconds.
+  path: Assets/2D Assets/World/terrainTiles_default.png
+  artifactKey: Guid(080eeee755dce4649a818f70716f2f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/terrainTiles_default.png using Guid(080eeee755dce4649a818f70716f2f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86273c247396f1387e9ead2599ef5cdd') in 0.008978 seconds 
+  Import took 0.012062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.265110 seconds.
+  path: Assets/2D Assets/World/terrainTiles_default.png
+  artifactKey: Guid(080eeee755dce4649a818f70716f2f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/terrainTiles_default.png using Guid(080eeee755dce4649a818f70716f2f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffbee2ae092874a638c9b8faa4bc9c98') in 0.117521 seconds 
+  Import took 0.120819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.595388 seconds.
+  path: Assets/TilemapPalletes/TerrainTiles.prefab
+  artifactKey: Guid(801c554d933e9154597eca1a54947b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TilemapPalletes/TerrainTiles.prefab using Guid(801c554d933e9154597eca1a54947b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b02e05cba2b4c32b268ad2a64ec7e1c') in 0.011666 seconds 
+  Import took 0.014826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.230425 seconds.
+  path: Assets/2D Assets/World/terrainTiles_retina.png
+  artifactKey: Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/terrainTiles_retina.png using Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a686ae1b3db751af33c9fabfcde5af') in 0.011875 seconds 
+  Import took 0.015056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.661520 seconds.
+  path: Assets/2D Assets/World/TerrainTiles.png
+  artifactKey: Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/TerrainTiles.png using Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e7a831e4624b5167789a1ddc0557ac') in 0.013739 seconds 
+  Import took 0.016856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.805396 seconds.
+  path: Assets/2D Assets/World/TerrainTiles.png
+  artifactKey: Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/TerrainTiles.png using Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfcf55d2355666e8124a6b80cc08b6f') in 0.008733 seconds 
+  Import took 0.012493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.537224 seconds.
+  path: Assets/2D Assets/World/TerrainTiles.png
+  artifactKey: Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/TerrainTiles.png using Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99b369ab7682416f0495c16bc9d875bc') in 0.361045 seconds 
+  Import took 0.364286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.731835 seconds.
+  path: Assets/2D Assets/World/Tiles
+  artifactKey: Guid(9acdeb8287a9f6d458d5414f134fa30b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/Tiles using Guid(9acdeb8287a9f6d458d5414f134fa30b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6421bd5cf7836cf86b241a6e7d68ed4') in 0.003928 seconds 
+  Import took 0.007434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.967433 seconds.
+  path: Assets/2D Assets/World/TerrainTiles
+  artifactKey: Guid(9acdeb8287a9f6d458d5414f134fa30b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/TerrainTiles using Guid(9acdeb8287a9f6d458d5414f134fa30b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db84cf2127a442fbf306193b558e9d82') in 0.004260 seconds 
+  Import took 0.007661 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.719875 seconds.
+  path: Assets/2D Assets/World/TerrainTiles_Spritesheet.png
+  artifactKey: Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/World/TerrainTiles_Spritesheet.png using Guid(88ed6f84fc6997e43b6fb3f378255ec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd688dedfc1724ebde44aeb98e8202cf4') in 0.300896 seconds 
+  Import took 0.304170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4310.717563 seconds.
+  path: Assets/2D Assets/Tank/Barrels/tankBlue_barrel1_outline.png
+  artifactKey: Guid(7dcd72755c42800459015924e743b860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Tank/Barrels/tankBlue_barrel1_outline.png using Guid(7dcd72755c42800459015924e743b860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2480e156e9845a27cd61dcb83598594c') in 0.028564 seconds 
+  Import took 0.036797 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.530999 seconds.
+  path: Assets/2D Assets/Tank/Barrels/tankBlue_barrel2_outline.png
+  artifactKey: Guid(a68afae7a463e39498c65028a19bad43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Tank/Barrels/tankBlue_barrel2_outline.png using Guid(a68afae7a463e39498c65028a19bad43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be823e3ff72e152018e9722ac2379683') in 0.030684 seconds 
+  Import took 0.033414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.188297 seconds.
+  path: Assets/2D Assets/Tank/Barrels/tankBlue_barrel3_outline.png
+  artifactKey: Guid(ab36d57e0be6e114582c67a4a14b0d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Assets/Tank/Barrels/tankBlue_barrel3_outline.png using Guid(ab36d57e0be6e114582c67a4a14b0d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af2a4aebe0d363c6e5d2a2e0dda82ccf') in 0.015250 seconds 
+  Import took 0.018655 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
