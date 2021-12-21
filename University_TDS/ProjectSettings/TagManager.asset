@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player&Enemies
+    uniqueID: 445274905
+    locked: 0
+  - name: VFX
+    uniqueID: 1434065329
+    locked: 0
+  - name: Environment
+    uniqueID: 1996636465
+    locked: 0
+  - name: GUI
+    uniqueID: 2253325139
+    locked: 0
