@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerMovement();
+        SetBounds();
     }
     #endregion
 
@@ -39,13 +40,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void PlayerBounds()
+    private void SetBounds()
     {
         if (this.transform.position.x < -17.3f)
             this.transform.position = new Vector3(-17.3f, this.transform.position.y, this.transform.position.z);
 
         if (this.transform.position.x > 17.3f)
             this.transform.position = new Vector3(17.3f, this.transform.position.y, this.transform.position.z);
+
+        if (this.transform.position.y < -9.55f)
+            this.transform.position = new Vector3(this.transform.position.x, -9.55f, this.transform.position.z);
+
+        if (this.transform.position.y > 9.55f)
+            this.transform.position = new Vector3(this.transform.position.x, 9.55f, this.transform.position.z);
     }
     #endregion
 }

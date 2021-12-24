@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [Header("Weapon Settings")]
     public float weaponFireRate;
     public float weaponSpread;
-    //public float weaponsPerShot; //Attempt later fam
+    public int bulletsPerShot;
 
     [Header("VFX")]
     public GameObject muzzleFlash;
@@ -21,25 +21,41 @@ public class Weapon : MonoBehaviour
     //Private Variables
     private float fireRateCount;
     private float weaponSpreadWidth;
+    private int bulletsCreated;
 
-    private void FixedUpdate()
-    {
-        HandleInputs();
-    }
-
-    private void HandleInputs()
+    public virtual void Update()
     {
         //Count down value
         fireRateCount -= Time.deltaTime;
+
+        //Reset value
+        if (bulletsCreated <= 0)
+            bulletsCreated = bulletsPerShot;
+    }
+
+    public void Shoot()
+    {
         //If conditions are met, shoot!
-        if (Input.GetMouseButton(0) && fireRateCount <= 0)
+        if (fireRateCount <= 0)
         {
+            //Reset
             fireRateCount = weaponFireRate;
+            //Call function
             InstantiateBullet();
         }
     }
 
-    private void InstantiateBullet()
+    //Simply does a loop to create multiple bullets
+    public void InstantiateBullets()
+    {
+        if (bulletsCreated > 0)
+        {
+            InstantiateBullet();
+            bulletsCreated--;
+        }
+    }
+
+    public void InstantiateBullet()
     {
         //Call Function
         CreateMuzzleFlash();

@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     [Header("References")]
     public EnemyTankBody tankBody;
     public EnemyTankTurret tankTurret;
+    public EnemyStandardWeapon weapon;
 
     //Private Variables
     private GameObject player;
@@ -58,13 +59,15 @@ public class EnemyController : MonoBehaviour
 
     private void EnemyShooting()
     {
-        //Call function
+        //Call functions
         tankTurret.TankTurretRotation();
+        weapon.HandleEnemyShooting();
     }
 
     private void EnemyReloading()
     {
-
+        //Call functions
+        weapon.HandleEnemyReload();
     }
 }
 

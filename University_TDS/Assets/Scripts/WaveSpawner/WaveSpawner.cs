@@ -18,7 +18,51 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnPointEight;
     public Transform spawnPointNine;
     public Transform spawnPointBoss;
- 
+
+    [Header("Enemy Types")]
+    public GameObject enemyType01;
+    public GameObject enemyType02;
+    public GameObject enemyType03;
+    public GameObject enemyType04;
+    public GameObject boss;
+
+    //Private Variables
+    private int currentWave = 1;
+
+    private void Start() => HandleWaves(currentWave);
+
+    private void Update()
+    {
+        switch (waveState)
+        {
+            case WaveState.Starting:
+
+                break;
+
+            case WaveState.InProgress:
+
+                break;
+
+            case WaveState.Completed:
+
+                break;
+        }
+    }
+
+    private void HandleWaves(int i)
+    {
+        if (i == 1)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType01, spawnPointFour);
+        }
+    }
+
+    // Simple function that takes two parameters for ease of creating enemies
+    private void SpawnEnemy(GameObject enemy, Transform transform)
+    {
+        Instantiate(enemy, transform.position, Quaternion.identity);
+    }
 }
 
 public enum WaveState
