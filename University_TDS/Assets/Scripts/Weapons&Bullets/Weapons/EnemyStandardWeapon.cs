@@ -23,6 +23,19 @@ public class EnemyStandardWeapon : Weapon
         timeToReload = reloadingPeriod;
     }
 
+    public override void Update()
+    {
+        //Get inital information
+        base.Update();
+
+        //set function
+        if (enemyController.enemyState == EnemyState.Shooting)
+            HandleEnemyShooting();
+
+        if (enemyController.enemyState == EnemyState.Reloading)
+            HandleEnemyReload();
+    }
+
     public void HandleEnemyShooting()
     {
         if (canShoot)
@@ -59,7 +72,6 @@ public class EnemyStandardWeapon : Weapon
                 canShoot = true;
                 //Switch state
                 enemyController.enemyState = EnemyState.Moving;
-
             }
         }
     }

@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class EnemyTankTurret : MonoBehaviour
 {
+    [Header("References")]
+    public EnemyController enemyController;
+
     //Private Variables
     private Transform player;
 
     private void Start() => player = GameObject.Find("Player").GetComponent<Transform>();
+
+    private void Update()
+    {
+        if (enemyController.enemyState == EnemyState.Shooting)
+            TankTurretRotation();
+    }
 
     public void TankTurretRotation()
     {

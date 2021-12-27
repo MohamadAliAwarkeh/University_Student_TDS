@@ -14,8 +14,6 @@ public class EnemyController : MonoBehaviour
 
     [Header("References")]
     public EnemyTankBody tankBody;
-    public EnemyTankTurret tankTurret;
-    public EnemyStandardWeapon weapon;
 
     //Private Variables
     private GameObject player;
@@ -34,11 +32,11 @@ public class EnemyController : MonoBehaviour
                 break;
 
             case EnemyState.Shooting:
-                EnemyShooting();
+                //Function is called in the EnemyTankTurret.cs
                 break;
 
             case EnemyState.Reloading:
-                EnemyReloading();
+                //Functions are called in the EnemyStandardWeapon.cs
                 break;
 
             case EnemyState.Dead:
@@ -55,19 +53,6 @@ public class EnemyController : MonoBehaviour
 
         if (firingRange.GetComponent<SpriteRenderer>().bounds.Intersects(player.GetComponent<SpriteRenderer>().bounds))
             enemyState = EnemyState.Shooting;
-    }
-
-    private void EnemyShooting()
-    {
-        //Call functions
-        tankTurret.TankTurretRotation();
-        weapon.HandleEnemyShooting();
-    }
-
-    private void EnemyReloading()
-    {
-        //Call functions
-        weapon.HandleEnemyReload();
     }
 }
 

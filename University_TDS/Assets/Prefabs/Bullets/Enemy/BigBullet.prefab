@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 946400449267118280}
   - component: {fileID: 946400449267118327}
-  - component: {fileID: 5787002413288204530}
+  - component: {fileID: 946400449267118326}
   m_Layer: 0
-  m_Name: StandardBullet
+  m_Name: BigBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 946400449267118325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e212322a938effe47b227221ea4a17ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60794bd06d50a7c4a938cf8a9cfbe21d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5787002413288204530
+--- !u!114 &946400449267118326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,16 +92,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 946400449267118325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00b9141d3567e940b92d73686592dfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 43419a3a4f7e51544a1660577a0bac0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 1
-  bulletSpeed: 9
-  bulletRange: 10
-  bulletHitVFX: {fileID: 5840768962638652822, guid: 2b82e9f1ce7b15b4fba62f426fe3af1b, type: 3}
-  mySR: {fileID: 0}
-  enemyParentObj: {fileID: 0}
-  targetID: 0
-  enemiesMax: 0
-  enemy: {fileID: 0}
-  enemyHealth: {fileID: 0}
+  bulletDamage: 2
+  bulletSpeed: 10
+  bulletRange: 3
+  bulletHitVFX: {fileID: 0}

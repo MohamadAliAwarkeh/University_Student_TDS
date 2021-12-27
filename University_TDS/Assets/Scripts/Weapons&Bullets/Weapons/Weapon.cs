@@ -10,7 +10,6 @@ public class Weapon : MonoBehaviour
     [Header("Weapon Settings")]
     public float weaponFireRate;
     public float weaponSpread;
-    public int bulletsPerShot;
 
     [Header("VFX")]
     public GameObject muzzleFlash;
@@ -27,10 +26,6 @@ public class Weapon : MonoBehaviour
     {
         //Count down value
         fireRateCount -= Time.deltaTime;
-
-        //Reset value
-        if (bulletsCreated <= 0)
-            bulletsCreated = bulletsPerShot;
     }
 
     public void Shoot()
@@ -42,16 +37,6 @@ public class Weapon : MonoBehaviour
             fireRateCount = weaponFireRate;
             //Call function
             InstantiateBullet();
-        }
-    }
-
-    //Simply does a loop to create multiple bullets
-    public void InstantiateBullets()
-    {
-        if (bulletsCreated > 0)
-        {
-            InstantiateBullet();
-            bulletsCreated--;
         }
     }
 

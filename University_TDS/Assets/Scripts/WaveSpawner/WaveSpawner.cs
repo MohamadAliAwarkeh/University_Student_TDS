@@ -26,6 +26,9 @@ public class WaveSpawner : MonoBehaviour
     public GameObject enemyType04;
     public GameObject boss;
 
+    [Header("References")]
+    public Transform enemyParentObj;
+
     //Private Variables
     private int currentWave = 1;
 
@@ -61,7 +64,10 @@ public class WaveSpawner : MonoBehaviour
     // Simple function that takes two parameters for ease of creating enemies
     private void SpawnEnemy(GameObject enemy, Transform transform)
     {
-        Instantiate(enemy, transform.position, Quaternion.identity);
+        //Create the enemy
+        GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
+        //Parent enemy to reference
+        newEnemy.transform.parent = enemyParentObj.transform;
     }
 }
 

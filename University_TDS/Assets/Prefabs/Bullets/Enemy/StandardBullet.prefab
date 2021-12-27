@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 1
-  bulletSpeed: 9
+  bulletSpeed: 10
   bulletRange: 1
   bulletHitVFX: {fileID: 0}

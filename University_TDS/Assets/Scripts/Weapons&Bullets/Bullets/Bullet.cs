@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [Header("Bullet Settings")]
-    public float bulletDamage;
+    public int bulletDamage;
     public float bulletSpeed;
     public float bulletRange;
 
@@ -14,18 +14,21 @@ public class Bullet : MonoBehaviour
 
     //Private Variables
     private float bulletLifetime;
+    [HideInInspector] public SpriteRenderer mySR;
 
-    private void Start()
+    public virtual void Start()
     {
+        //Setting max lifetime
         bulletLifetime = bulletRange;
+        //Setting SR
+        mySR = this.GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
+    public virtual void Update()
     {
         //Call functions
         MoveBullet();
         BulletLifetime();
-        CalculateCollision();
     }
 
     private void MoveBullet()
@@ -41,10 +44,5 @@ public class Bullet : MonoBehaviour
 
         if (bulletLifetime <= 0)
             Destroy(gameObject);
-    }
-
-    private void CalculateCollision()
-    {
-
     }
 }
