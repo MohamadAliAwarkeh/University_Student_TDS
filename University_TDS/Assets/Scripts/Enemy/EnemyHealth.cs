@@ -16,10 +16,12 @@ public class EnemyHealth : MonoBehaviour
     //Private Variables
     private bool spawnedVFX;
     private float timer;
+    private WaveSpawner waveSpawner;
 
     private void Start()
     {
         timer = explosionVFX.GetComponent<DestroyVFX>().timer;
+        waveSpawner = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
     }
 
     private void FixedUpdate()
@@ -53,7 +55,12 @@ public class EnemyHealth : MonoBehaviour
         timer -= Time.deltaTime;
         //Destroy after particle completes
         if (timer <= 0)
+        {
+            //Increment
+            waveSpawner.currentAmount++;
+            //Destroy
             Destroy(gameObject);
+        }
     }
 
     public void EnemyDamaged(int damage)

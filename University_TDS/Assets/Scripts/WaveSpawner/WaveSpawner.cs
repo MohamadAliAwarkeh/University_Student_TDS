@@ -7,6 +7,12 @@ public class WaveSpawner : MonoBehaviour
     [Header("Wave State")]
     public WaveState waveState;
 
+    [Header("General Wave Information")]
+    public int currentAmount;
+    public int requiredAmount;
+    [Space(5)]
+    public float waveCountdown;
+
     [Header("Spawnpoints")]
     public Transform spawnPointOne;
     public Transform spawnPointTwo;
@@ -31,34 +37,86 @@ public class WaveSpawner : MonoBehaviour
 
     //Private Variables
     private int currentWave = 1;
+    private float timeBetweenWaves;
 
-    private void Start() => HandleWaves(currentWave);
+    #region Unity Functions
+    private void Start() => timeBetweenWaves = waveCountdown;
 
     private void Update()
     {
+        //Switch statement based on current wave settings
         switch (waveState)
         {
             case WaveState.Starting:
-
+                BeginWave(currentWave);
                 break;
 
             case WaveState.InProgress:
-
+                GoalReached();
                 break;
 
             case WaveState.Completed:
-
+                TimeBetweenWaves();
                 break;
         }
     }
+    #endregion
 
-    private void HandleWaves(int i)
+    #region Completed Wave Functions
+    private void TimeBetweenWaves()
     {
+        //Countdown
+        timeBetweenWaves -= Time.deltaTime;
+
+        if (timeBetweenWaves <= 0)
+        {
+            //Reset timer
+            timeBetweenWaves = waveCountdown;
+            //Increment
+            currentWave++;
+            //Change state
+            waveState = WaveState.Starting;
+        }
+    }
+
+    private bool GoalReached()
+    {
+        if (currentAmount > requiredAmount)
+        {
+            //Reset current amount
+            currentAmount = 0;
+            //Change state
+            waveState = WaveState.Completed;
+            //return
+            return true;
+        }
+
+        //return
+        return false;
+    }
+    #endregion
+
+    #region Wave / Enemy Functions
+    private void BeginWave(int i)
+    {
+
+        //Spawn wave based on currentWave 
         if (i == 1)
         {
             SpawnEnemy(enemyType01, spawnPointOne);
             SpawnEnemy(enemyType01, spawnPointFour);
         }
+        if (i == 2)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType01, spawnPointFour);
+            SpawnEnemy(enemyType02, spawnPointSeven);
+        }
+
+        //Set required amount based on the number of enemies spawned
+        requiredAmount = enemyParentObj.childCount;
+        //Change state
+        waveState = WaveState.InProgress;
     }
 
     // Simple function that takes two parameters for ease of creating enemies
@@ -69,6 +127,7 @@ public class WaveSpawner : MonoBehaviour
         //Parent enemy to reference
         newEnemy.transform.parent = enemyParentObj.transform;
     }
+    #endregion
 }
 
 public enum WaveState
