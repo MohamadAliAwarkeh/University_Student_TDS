@@ -81,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
 
     private bool GoalReached()
     {
-        if (currentAmount > requiredAmount)
+        if (currentAmount >= requiredAmount)
         {
             //Reset current amount
             currentAmount = 0;

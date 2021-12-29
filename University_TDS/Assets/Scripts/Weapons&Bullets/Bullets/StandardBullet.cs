@@ -30,13 +30,14 @@ public class StandardBullet : Bullet
 
     private void CalculateCollision()
     {
-        //Checking if the current enemy hit fits witin the max
-        if (targetID < enemiesMax)
+        //Checking if the current enemy hit fits witin the range
+        if (targetID < enemiesMax && enemiesMax == enemyParentObj.childCount)
         {
-            //Getting reference to the enemy HIT
-            enemy = enemyParentObj.GetChild(targetID).GetComponent<SpriteRenderer>();
+            //Getting reference to the enemy body
+            enemy = enemyParentObj.GetChild(targetID).GetChild(0).GetComponent<SpriteRenderer>();
             //Getting reference to the enemies health
-            enemyHealth = enemy.GetComponent<EnemyHealth>();
+            Transform baseEnemy = enemyParentObj.GetChild(targetID);
+            enemyHealth = baseEnemy.GetComponent<EnemyHealth>();
             //Collision between bullet and enemy
             if (mySR.bounds.Intersects(enemy.bounds))
             {
@@ -48,5 +49,11 @@ public class StandardBullet : Bullet
                 Destroy(gameObject);
             }
         }
+        else
+        {
+            targetID = -1;
+            enemiesMax = enemyParentObj.childCount;
+        }
+        targetID++;
     }
 }

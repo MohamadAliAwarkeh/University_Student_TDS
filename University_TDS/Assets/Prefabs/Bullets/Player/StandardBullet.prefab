@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 1
   bulletSpeed: 9
-  bulletRange: 10
+  bulletRange: 1
   bulletHitVFX: {fileID: 5840768962638652822, guid: 2b82e9f1ce7b15b4fba62f426fe3af1b, type: 3}
   mySR: {fileID: 0}
   enemyParentObj: {fileID: 0}
