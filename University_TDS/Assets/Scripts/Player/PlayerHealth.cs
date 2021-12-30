@@ -18,6 +18,12 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update() => DisplayHealth();
 
+    public void PlayerDamaged(int damage)
+    {
+        //Remove health
+        health -= damage;
+    }
+
     private void DisplayHealth()
     {
         if (health == 6)

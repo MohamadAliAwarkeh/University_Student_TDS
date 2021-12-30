@@ -5,11 +5,11 @@ using UnityEngine;
 public class StandardBullet : Bullet
 {
     //Private Variables
-    [SerializeField] private Transform enemyParentObj;
-    [SerializeField] private int targetID;
-    [SerializeField] private int enemiesMax;
-    [SerializeField] private SpriteRenderer enemy;
-    [SerializeField] private EnemyHealth enemyHealth;
+    private Transform enemyParentObj;
+    private int targetID;
+    private int enemiesMax;
+    private SpriteRenderer enemy;
+    private EnemyHealth enemyHealth;
 
     public override void Start()
     {

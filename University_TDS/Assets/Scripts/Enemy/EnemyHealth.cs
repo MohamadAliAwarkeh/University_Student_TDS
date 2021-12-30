@@ -24,10 +24,7 @@ public class EnemyHealth : MonoBehaviour
         waveSpawner = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
     }
 
-    private void FixedUpdate()
-    {
-        CurrentHealth();
-    }
+    private void FixedUpdate() => CurrentHealth();
 
     private void CurrentHealth()
     {
@@ -65,7 +62,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void EnemyDamaged(int damage)
     {
-        //remove health
+        //Remove health
         health -= damage;
     }
 }
