@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class TankBodyRotation : MonoBehaviour
 {
-    #region Unity Functions
-    private void FixedUpdate() => RotateBody();
-    #endregion
-
-    #region Private Functions
-    private void RotateBody()
+    public void RotateBody()
     {
         //Rotate forward
         if (Input.GetKey(KeyCode.W))
@@ -32,5 +27,4 @@ public class TankBodyRotation : MonoBehaviour
             this.transform.rotation = Quaternion.Euler(0f, 0f, -90f);
         }
     }
-    #endregion
 }

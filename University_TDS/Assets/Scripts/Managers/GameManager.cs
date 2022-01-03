@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.InProgress:
+                //This is for all the other classes to switch to this game state
                 break;
 
             case GameState.GameWin:
@@ -46,7 +47,6 @@ public class GameManager : MonoBehaviour
 
     private void GameStartCountdown()
     {
-        Debug.Log(timer);
         //Counts down
         timer -= Time.deltaTime;
         //If timer reaches 0, then...

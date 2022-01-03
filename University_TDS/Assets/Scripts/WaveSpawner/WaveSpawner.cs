@@ -38,27 +38,38 @@ public class WaveSpawner : MonoBehaviour
     //Private Variables
     private int currentWave = 1;
     private float timeBetweenWaves;
+    private GameManager gameManager;
 
     #region Unity Functions
-    private void Start() => timeBetweenWaves = waveCountdown;
+    private void Start()
+    {
+        //Set timer
+        timeBetweenWaves = waveCountdown;
+        //Get reference
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     private void Update()
     {
-        //Switch statement based on current wave settings
-        switch (waveState)
+        //Call based on game state
+        if (gameManager.gameState == GameState.InProgress)
         {
-            case WaveState.Starting:
-                BeginWave(currentWave);
-                break;
+            //Switch statement based on current wave settings
+            switch (waveState)
+            {
+                case WaveState.Starting:
+                    BeginWave(currentWave);
+                    break;
 
-            case WaveState.InProgress:
-                GoalReached();
-                break;
+                case WaveState.InProgress:
+                    GoalReached();
+                    break;
 
-            case WaveState.Completed:
-                TimeBetweenWaves();
-                break;
-        }
+                case WaveState.Completed:
+                    TimeBetweenWaves();
+                    break;
+            }
+        }  
     }
     #endregion
 

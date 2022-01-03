@@ -7,13 +7,33 @@ public class PlayerController : MonoBehaviour
     [Header("Player Movement Settings")]
     public float moveSpeed;
 
-    private void Update()
+    [Header("References")]
+    public TankBodyRotation tankBody;
+    public TankTurretRotation tankTurret;
+
+    //Private variables
+    private GameManager gameManager;
+
+    private void Start()
     {
-        PlayerMovement();
-        SetBounds();
+        //Get reference
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    #region Private Functions
+    private void Update()
+    {
+        //Call based on game state
+        if (gameManager.gameState == GameState.InProgress)
+        {
+            //Call functions
+            PlayerMovement();
+            SetBounds();
+            //Call functions from references
+            tankBody.RotateBody();
+            tankTurret.RotateTurret();
+        }
+    }
+
     private void PlayerMovement()
     {
         //Move forward
@@ -52,5 +72,4 @@ public class PlayerController : MonoBehaviour
         if (this.transform.position.y > 9.55f)
             this.transform.position = new Vector3(this.transform.position.x, 9.55f, this.transform.position.z);
     }
-    #endregion
 }

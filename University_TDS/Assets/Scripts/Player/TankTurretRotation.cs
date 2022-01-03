@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class TankTurretRotation : MonoBehaviour
 {
-    private void FixedUpdate() => RotateTurret();
-
-    private void RotateTurret()
+    public void RotateTurret()
     {
         //Getting the direction between the mouse and our position
         var direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
