@@ -69,7 +69,10 @@ public class WaveSpawner : MonoBehaviour
                     TimeBetweenWaves();
                     break;
             }
-        }  
+        }
+
+        //Call function
+        Reset();
     }
     #endregion
 
@@ -110,7 +113,6 @@ public class WaveSpawner : MonoBehaviour
     #region Wave / Enemy Functions
     private void BeginWave(int i)
     {
-
         //Spawn wave based on currentWave 
         if (i == 1)
         {
@@ -122,6 +124,25 @@ public class WaveSpawner : MonoBehaviour
             SpawnEnemy(enemyType01, spawnPointOne);
             SpawnEnemy(enemyType01, spawnPointFour);
             SpawnEnemy(enemyType02, spawnPointSeven);
+        }
+        if (i == 3)
+        {
+            SpawnEnemy(enemyType01, spawnPointFour);
+            SpawnEnemy(enemyType01, spawnPointFive);
+            SpawnEnemyWithTimer(enemyType03, spawnPointOne, 2f);
+            SpawnEnemyWithTimer(enemyType03, spawnPointNine, 2f);
+        }
+        if (i == 4)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType03, spawnPointNine);
+            SpawnEnemyWithTimer(boss, spawnPointBoss, 5f);
+        }
+        if (i == 5)
+        {
+            //A bit of a cheat, but when you complete all waves
+            //increment one last time and change the game state
+            gameManager.gameState = GameState.GameWin;
         }
 
         //Set required amount based on the number of enemies spawned
@@ -137,6 +158,39 @@ public class WaveSpawner : MonoBehaviour
         GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
         //Parent enemy to reference
         newEnemy.transform.parent = enemyParentObj.transform;
+    }
+
+    private void SpawnEnemyWithTimer(GameObject enemy, Transform transform, float timer)
+    {
+        //Counting down
+        timer -= Time.deltaTime;
+        //If the timer reaches 0, then...
+        if (timer <= 0)
+        {
+            //Create the enemy
+            GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
+            //Parent enemy to reference
+            newEnemy.transform.parent = enemyParentObj.transform;
+        }
+    }
+    #endregion
+
+    #region Reset Function
+    private void Reset()
+    {
+        ////Based on the game state
+        //if (gameManager.gameState == GameState.MainMenu)
+        //{
+        //    //While there are children within the parent object
+        //    while (enemyParentObj.childCount > 0)
+        //        //Keep destroying the objects until there is 0
+        //        Destroy(enemyParentObj.GetChild(0).gameObject);
+        //
+        //    //Reseting variables
+        //    waveState = WaveState.Starting;
+        //    currentWave = 1;
+        //    currentAmount = 0;
+        //}
     }
     #endregion
 }

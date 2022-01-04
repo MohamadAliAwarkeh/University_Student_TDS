@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public float timeBetweenWaves;
 
     [Header("References")]
+    public GameObject mainMenuPanel;
     public GameObject winPanel;
     public GameObject losePanel;
 
@@ -27,6 +28,11 @@ public class GameManager : MonoBehaviour
         //Handles game states
         switch (gameState)
         {
+            case GameState.MainMenu:
+                DisplayMainMenu();
+                //This is also where all resets that need to happen will
+                break;
+
             case GameState.InGame:
                 GameStartCountdown();
                 break;
@@ -37,10 +43,12 @@ public class GameManager : MonoBehaviour
 
             case GameState.GameWin:
                 DisplayWinPanel();
+                Reset();
                 break;
 
             case GameState.GameLoss:
                 DisplayLosePanel();
+                Reset();
                 break;
         }
     }
@@ -59,11 +67,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Reset()
+    {
+        //If any input is detected, reset
+        if (Input.anyKeyDown)
+            gameState = GameState.MainMenu;
+    }
+
     #region Panel Functions
+    private void DisplayMainMenu()
+    {
+        mainMenuPanel.SetActive(true);
+        losePanel.SetActive(false);
+        winPanel.SetActive(false);
+    }
+
     private void DisplayLosePanel() => losePanel.SetActive(true);
 
     private void DisplayWinPanel() => winPanel.SetActive(true);
     #endregion
+
 }
 
 public enum GameState

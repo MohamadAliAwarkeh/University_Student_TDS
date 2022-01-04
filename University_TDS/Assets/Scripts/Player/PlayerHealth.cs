@@ -16,7 +16,24 @@ public class PlayerHealth : MonoBehaviour
     public Sprite halfHeart;
     public Sprite emptyHeart;
 
-    private void Update() => DisplayHealth();
+    //Private Variable
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();   
+    }
+
+    private void Update()
+    {
+        //Call function
+        DisplayHealth();
+        Reset();
+
+        //Cap health
+        if (health >= 6)
+            health = 6;
+    }
 
     public void PlayerDamaged(int damage)
     {
@@ -26,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void DisplayHealth()
     {
+        //Changes sprites based on health amount
         if (health == 6)
         {
             health3.sprite = fullHeart;
@@ -67,6 +85,28 @@ public class PlayerHealth : MonoBehaviour
             health3.sprite = emptyHeart;
             health2.sprite = emptyHeart;
             health1.sprite = emptyHeart;
+            //Call function
+            PlayerDead();
+        }
+    }
+
+    private void PlayerDead()
+    {
+        if (health == 0)
+        {
+            //Do things here
+
+            //Change game state
+            gameManager.gameState = GameState.GameLoss;
+        }
+    }
+
+    private void Reset()
+    {
+        if (gameManager.gameState == GameState.MainMenu)
+        {
+            //Reset health
+            health = 6;
         }
     }
 }

@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        //Call based on game state
+        //Call function
+        Reset();
+
         if (gameManager.gameState == GameState.InProgress)
         {
             //Call functions
@@ -71,5 +73,14 @@ public class PlayerController : MonoBehaviour
 
         if (this.transform.position.y > 9.55f)
             this.transform.position = new Vector3(this.transform.position.x, 9.55f, this.transform.position.z);
+    }
+
+    private void Reset()
+    {
+        if (gameManager.gameState == GameState.MainMenu)
+        {
+            //Reset position
+            this.transform.position = Vector3.zero;
+        }
     }
 }
