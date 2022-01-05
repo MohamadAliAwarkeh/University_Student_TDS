@@ -28,7 +28,6 @@ public class PlayerHealth : MonoBehaviour
     {
         //Call function
         DisplayHealth();
-        Reset();
 
         //Cap health
         if (health >= 6)
@@ -98,15 +97,6 @@ public class PlayerHealth : MonoBehaviour
 
             //Change game state
             gameManager.gameState = GameState.GameLoss;
-        }
-    }
-
-    private void Reset()
-    {
-        if (gameManager.gameState == GameState.MainMenu)
-        {
-            //Reset health
-            health = 6;
         }
     }
 }

@@ -48,6 +48,10 @@ public class MenuButton : MonoBehaviour
                     StartGame();
                     break;
 
+                case ButtonTypes.EndlessMode:
+                    StartEndlessMode();
+                    break;
+
                 case ButtonTypes.Controls:
                     DisplayControlsPanel();
                     break;
@@ -67,20 +71,27 @@ public class MenuButton : MonoBehaviour
             MouseExit();
     }
 
-    private void MouseOver()
-    {
-        //Change colour
-        text.color = highlightedColour;
-        //Increase scale
-        text.fontSize = highlightedScale;
-    }
-
+    #region Functions for enums
     private void StartGame()
     {
         //Change state
-        gameManager.gameState = GameState.InGame;
+        gameManager.gameState = GameState.MainGame;
         //Disable main menu
         mainMenu.SetActive(false);
+        //Setting gamemode
+        gameManager.waveMode.SetActive(true);
+        gameManager.endlessMode.SetActive(false);
+    }
+
+    private void StartEndlessMode()
+    {
+        //Change state
+        gameManager.gameState = GameState.EndlessMode;
+        //Disable main menu
+        mainMenu.SetActive(false);
+        //Setting gamemode
+        gameManager.endlessMode.SetActive(true);
+        gameManager.waveMode.SetActive(false);
     }
 
     private void DisplayControlsPanel()
@@ -104,6 +115,16 @@ public class MenuButton : MonoBehaviour
         //Quits the game
         Application.Quit();
     }
+    #endregion
+
+    #region Mouse Functions
+    private void MouseOver()
+    {
+        //Change colour
+        text.color = highlightedColour;
+        //Increase scale
+        text.fontSize = highlightedScale;
+    }
 
     private void MouseExit()
     {
@@ -112,11 +133,13 @@ public class MenuButton : MonoBehaviour
         //Set scale back to original
         text.fontSize = originalScale;
     }
+    #endregion
 }
 
 public enum ButtonTypes
 {
     StartGame,
+    EndlessMode,
     Controls,
     MainMenu,
     Quit

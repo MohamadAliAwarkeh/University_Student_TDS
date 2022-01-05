@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class WaveSpawner : MonoBehaviour
 {
     [Header("Wave State")]
@@ -70,9 +69,6 @@ public class WaveSpawner : MonoBehaviour
                     break;
             }
         }
-
-        //Call function
-        Reset();
     }
     #endregion
 
@@ -172,25 +168,6 @@ public class WaveSpawner : MonoBehaviour
             //Parent enemy to reference
             newEnemy.transform.parent = enemyParentObj.transform;
         }
-    }
-    #endregion
-
-    #region Reset Function
-    private void Reset()
-    {
-        ////Based on the game state
-        //if (gameManager.gameState == GameState.MainMenu)
-        //{
-        //    //While there are children within the parent object
-        //    while (enemyParentObj.childCount > 0)
-        //        //Keep destroying the objects until there is 0
-        //        Destroy(enemyParentObj.GetChild(0).gameObject);
-        //
-        //    //Reseting variables
-        //    waveState = WaveState.Starting;
-        //    currentWave = 1;
-        //    currentAmount = 0;
-        //}
     }
     #endregion
 }
