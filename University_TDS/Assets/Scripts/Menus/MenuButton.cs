@@ -22,6 +22,7 @@ public class MenuButton : MonoBehaviour
     [Space(5)]
     public GameObject mainMenu;
     public GameObject controlsPanel;
+    public GameObject accessibilityPanel;
 
     //Private Variables
     private SpriteRenderer mouseCol;
@@ -56,6 +57,10 @@ public class MenuButton : MonoBehaviour
                     DisplayControlsPanel();
                     break;
 
+                case ButtonTypes.Accessibility:
+                    DisplayAccessibilityPanel();
+                    break;
+
                 case ButtonTypes.MainMenu:
                     DisplayMainMenu();
                     break;
@@ -80,7 +85,6 @@ public class MenuButton : MonoBehaviour
         mainMenu.SetActive(false);
         //Setting gamemode
         gameManager.waveMode.SetActive(true);
-        gameManager.endlessMode.SetActive(false);
     }
 
     private void StartEndlessMode()
@@ -91,23 +95,31 @@ public class MenuButton : MonoBehaviour
         mainMenu.SetActive(false);
         //Setting gamemode
         gameManager.endlessMode.SetActive(true);
-        gameManager.waveMode.SetActive(false);
     }
 
     private void DisplayControlsPanel()
     {
-        //Display controls panel
-        controlsPanel.SetActive(true);
         //Disable main menu
         mainMenu.SetActive(false);
+        //Display controls panel
+        controlsPanel.SetActive(true);
+    }
+
+    private void DisplayAccessibilityPanel()
+    {
+        //Disable main menu
+        mainMenu.SetActive(false);
+        //Display accessibility panel
+        accessibilityPanel.SetActive(true);
     }
 
     private void DisplayMainMenu()
     {
         //Display main menu
         mainMenu.SetActive(true);
-        //Disable controls panel
+        //Disable other panels
         controlsPanel.SetActive(false);
+        accessibilityPanel.SetActive(false);
     }
 
     private void QuitGame()
@@ -141,6 +153,7 @@ public enum ButtonTypes
     StartGame,
     EndlessMode,
     Controls,
+    Accessibility,
     MainMenu,
     Quit
 }

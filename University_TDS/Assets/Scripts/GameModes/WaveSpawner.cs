@@ -28,7 +28,6 @@ public class WaveSpawner : MonoBehaviour
     public GameObject enemyType01;
     public GameObject enemyType02;
     public GameObject enemyType03;
-    public GameObject enemyType04;
     public GameObject boss;
 
     [Header("References")]
@@ -125,14 +124,14 @@ public class WaveSpawner : MonoBehaviour
         {
             SpawnEnemy(enemyType01, spawnPointFour);
             SpawnEnemy(enemyType01, spawnPointFive);
-            SpawnEnemyWithTimer(enemyType03, spawnPointOne, 2f);
-            SpawnEnemyWithTimer(enemyType03, spawnPointNine, 2f);
+            SpawnEnemy(enemyType03, spawnPointOne);
+            SpawnEnemy(enemyType03, spawnPointNine);
         }
         if (i == 4)
         {
             SpawnEnemy(enemyType01, spawnPointOne);
             SpawnEnemy(enemyType03, spawnPointNine);
-            SpawnEnemyWithTimer(boss, spawnPointBoss, 5f);
+            SpawnEnemy(boss, spawnPointBoss);
         }
         if (i == 5)
         {
@@ -154,20 +153,6 @@ public class WaveSpawner : MonoBehaviour
         GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
         //Parent enemy to reference
         newEnemy.transform.parent = enemyParentObj.transform;
-    }
-
-    private void SpawnEnemyWithTimer(GameObject enemy, Transform transform, float timer)
-    {
-        //Counting down
-        timer -= Time.deltaTime;
-        //If the timer reaches 0, then...
-        if (timer <= 0)
-        {
-            //Create the enemy
-            GameObject newEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
-            //Parent enemy to reference
-            newEnemy.transform.parent = enemyParentObj.transform;
-        }
     }
     #endregion
 }

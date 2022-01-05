@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         switch (gameState)
         {
             case GameState.MainMenu:
-                DisplayMainMenu();
+
                 break;
 
             //Set to this state from the MenuButton.cs
@@ -93,13 +93,6 @@ public class GameManager : MonoBehaviour
     }
 
     #region Panel Functions
-    private void DisplayMainMenu()
-    {
-        mainMenuPanel.SetActive(true);
-        losePanel.SetActive(false);
-        winPanel.SetActive(false);
-    }
-
     private void DisplayLosePanel() => losePanel.SetActive(true);
 
     private void DisplayWinPanel() => winPanel.SetActive(true);
