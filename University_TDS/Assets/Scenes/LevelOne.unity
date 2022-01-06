@@ -594,7 +594,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.5471423, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2090,7 +2090,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.05490196, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3258,7 +3258,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.009780884, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.2, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4501,6 +4501,7 @@ GameObject:
   - component: {fileID: 754005333}
   - component: {fileID: 754005335}
   - component: {fileID: 754005334}
+  - component: {fileID: 754005336}
   m_Layer: 0
   m_Name: Select
   m_TagString: Untagged
@@ -4548,7 +4549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select
+  m_text: Selected
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4661,6 +4662,24 @@ MeshRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &754005336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754005332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc834c429278c7d479bcb9efe75fbee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 754005334}
+  baseColour: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColour: {r: 0, g: 0.9804158, b: 1, a: 1}
+  originalScale: 8
+  highlightedScale: 10
+  colourblindMode: 0
 --- !u!1 &798267501
 GameObject:
   m_ObjectHideFlags: 0
@@ -23710,7 +23729,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.6039216, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23963,7 +23982,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.5471423, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -43949,7 +43968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1222168707
 Transform:
   m_ObjectHideFlags: 0
@@ -43983,34 +44002,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e63c9f0fe62054daf98248c734939e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultColours: {fileID: 1339147841}
-  deuteranopiaColours: {fileID: 1297124079}
-  protanopiaColours: {fileID: 352755345}
-  triantopiaColours: {fileID: 1350180686}
+  colourblindMode: 0
   defaultRare: {r: 0, g: 1, b: 1, a: 1}
   defaultLegendary: {r: 1, g: 1, b: 0, a: 1}
   defaultOverheated: {r: 1, g: 0, b: 0.2, a: 1}
-  deuteranopiaRare: {r: 0, g: 1, b: 1, a: 1}
-  deuteranopiaLegendary: {r: 0, g: 1, b: 1, a: 1}
-  deuteranopiaOverheated: {r: 0, g: 1, b: 1, a: 1}
+  deuteranopiaRare: {r: 0, g: 0.6039216, b: 1, a: 1}
+  deuteranopiaLegendary: {r: 0.1882353, g: 0, b: 1, a: 1}
+  deuteranopiaOverheated: {r: 1, g: 0, b: 0.2, a: 1}
   protanopiaRare: {r: 0.053436995, g: 1, b: 0, a: 1}
-  protanopiaLegendary: {r: 0.05490196, g: 1, b: 0, a: 1}
-  protanopiaOverheated: {r: 0.05490196, g: 1, b: 0, a: 1}
-  tritanopiaRare: {r: 1, g: 0, b: 0.7602358, a: 1}
-  trianopiaLegendary: {r: 1, g: 0, b: 0.7607843, a: 1}
-  tritanopiaOverheated: {r: 1, g: 0, b: 0.7607843, a: 1}
-  enemyType01Rare: {fileID: 6441077435193153413, guid: 2496e05497420924d8a9e580e7788df6, type: 3}
-  enemyType02Rare: {fileID: 1466121333155722148, guid: f8ca4ccf1303ef34cb815e03a242ba52, type: 3}
-  enemyType03Rare: {fileID: 1101055295163282167, guid: b7258222f3ac77442b3b5424136aa47c, type: 3}
-  bossRare: {fileID: 7967122318076552506, guid: 4131266ded5a0f5429cb65ecbc9df527, type: 3}
-  enemyType01Legendary: {fileID: 3600530803969919269, guid: a93d21e032a62f64e907c3df8f1c7e18, type: 3}
-  enemyType02Legendary: {fileID: 1734890454385683227, guid: 9da0f1d5a5e9dbb40b5ff5ea134f5104, type: 3}
-  enemyType03Legendary: {fileID: 8649450598871900784, guid: 19adb0e4c773d6b4e84232e7ffc10e10, type: 3}
-  bossLegendary: {fileID: 4680020190592318328, guid: 4afa73918d071aa46bf5c42b07ba4b65, type: 3}
-  enemyType01Overheated: {fileID: 2254483151852718772, guid: 886f560d6574c3d4db462072afc3ea0a, type: 3}
-  enemyType02Overheated: {fileID: 3858379480454937092, guid: d3c4edb694081f4489336fbc67157d05, type: 3}
-  enemyType03Overheated: {fileID: 2998911384113445717, guid: b75cb9c3d6d5e5642992acef2c855a5c, type: 3}
-  bossOverheated: {fileID: 8695428268043275723, guid: f98f90d2b9a07854a8555ccba51183eb, type: 3}
+  protanopiaLegendary: {r: 0, g: 0, b: 1, a: 1}
+  protanopiaOverheated: {r: 1, g: 0, b: 0.2, a: 1}
+  tritanopiaRare: {r: 0, g: 1, b: 1, a: 1}
+  trianopiaLegendary: {r: 0, g: 0, b: 1, a: 1}
+  tritanopiaOverheated: {r: 1, g: 0, b: 0.2, a: 1}
 --- !u!1 &1230824878
 GameObject:
   m_ObjectHideFlags: 0
@@ -44222,6 +44226,7 @@ GameObject:
   - component: {fileID: 1253803981}
   - component: {fileID: 1253803983}
   - component: {fileID: 1253803982}
+  - component: {fileID: 1253803984}
   m_Layer: 0
   m_Name: Select
   m_TagString: Untagged
@@ -44382,6 +44387,24 @@ MeshRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1253803984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253803980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc834c429278c7d479bcb9efe75fbee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1253803982}
+  baseColour: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColour: {r: 0, g: 0.9804158, b: 1, a: 1}
+  originalScale: 8
+  highlightedScale: 10
+  colourblindMode: 2
 --- !u!1 &1297124077
 GameObject:
   m_ObjectHideFlags: 0
@@ -44537,7 +44560,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.009780884, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.2, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -44816,6 +44839,7 @@ GameObject:
   - component: {fileID: 1355569645}
   - component: {fileID: 1355569647}
   - component: {fileID: 1355569646}
+  - component: {fileID: 1355569648}
   m_Layer: 0
   m_Name: Select
   m_TagString: Untagged
@@ -44976,6 +45000,24 @@ MeshRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1355569648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355569644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc834c429278c7d479bcb9efe75fbee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1355569646}
+  baseColour: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColour: {r: 0, g: 0.9804158, b: 1, a: 1}
+  originalScale: 8
+  highlightedScale: 10
+  colourblindMode: 3
 --- !u!1 &1365973733
 GameObject:
   m_ObjectHideFlags: 0
@@ -46438,7 +46480,7 @@ GameObject:
   - component: {fileID: 1542918129}
   - component: {fileID: 1542918130}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46499,7 +46541,7 @@ SpriteRenderer:
   m_SortingLayerID: -2041642157
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: -5177388603050735206, guid: cc35afd292fc349128b36a291fb3a165, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
   m_FlipX: 0
   m_FlipY: 0
@@ -46583,7 +46625,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.5471423, b: 0, a: 1}
+  m_Color: {r: 0.1882353, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -47296,7 +47338,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.5471423, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -47321,7 +47363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1655420842
 Transform:
   m_ObjectHideFlags: 0
@@ -68710,6 +68752,7 @@ GameObject:
   - component: {fileID: 1987314971}
   - component: {fileID: 1987314973}
   - component: {fileID: 1987314972}
+  - component: {fileID: 1987314974}
   m_Layer: 0
   m_Name: Select
   m_TagString: Untagged
@@ -68870,6 +68913,24 @@ MeshRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1987314974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987314970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc834c429278c7d479bcb9efe75fbee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1987314972}
+  baseColour: {r: 1, g: 1, b: 1, a: 1}
+  highlightedColour: {r: 0, g: 0.9804158, b: 1, a: 1}
+  originalScale: 8
+  highlightedScale: 10
+  colourblindMode: 1
 --- !u!1 &2014794764
 GameObject:
   m_ObjectHideFlags: 0
@@ -87543,7 +87604,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.009780884, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.2, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87626,7 +87687,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.009780884, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.2, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

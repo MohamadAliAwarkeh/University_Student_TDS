@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7451147208917091486}
   - component: {fileID: 7451147208917091480}
-  - component: {fileID: 7451147208917091487}
+  - component: {fileID: 9099633768476250392}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -379,7 +379,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7451147208917091487
+--- !u!114 &9099633768476250392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,9 +388,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7451147208917091485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58466c7ad8ebcd741a0fb3498d993763, type: 3}
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 2
 --- !u!1 &7451147210507432476
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7451147210507432477}
   - component: {fileID: 7451147210507432478}
+  - component: {fileID: 300143065607437937}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -473,6 +475,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &300143065607437937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451147210507432476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rarity: 2
 --- !u!1001 &4428232463778490652
 PrefabInstance:
   m_ObjectHideFlags: 0
