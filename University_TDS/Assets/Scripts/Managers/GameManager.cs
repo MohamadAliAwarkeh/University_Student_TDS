@@ -6,8 +6,9 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Game State")]
+    [Header("States")]
     public GameState gameState;
+    public GameMode gameMode;
 
     [Header("Timer Settings")]
     public float timeBetweenWaves;
@@ -36,20 +37,6 @@ public class GameManager : MonoBehaviour
         //Handles game states
         switch (gameState)
         {
-            case GameState.MainMenu:
-
-                break;
-
-            //Set to this state from the MenuButton.cs
-            case GameState.MainGame:
-                GameCountdown();
-                break;
-
-            //Set to this state from the MenuButton.cs
-            case GameState.EndlessMode:
-                GameCountdown();
-                break;
-
             case GameState.InProgress:
                 //This is for all the other classes to switch to this game state
                 break;
@@ -62,6 +49,20 @@ public class GameManager : MonoBehaviour
             case GameState.GameLoss:
                 DisplayLosePanel();
                 Reset();
+                break;
+        }
+
+        //Handles game modes
+        switch (gameMode)
+        {
+            //Set to this state from the MenuButton.cs
+            case GameMode.MainGame:
+                GameCountdown();
+                break;
+
+            //Set to this state from the MenuButton.cs
+            case GameMode.EndlessMode:
+                GameCountdown();
                 break;
         }
     }
@@ -103,9 +104,14 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     MainMenu,
-    MainGame,
-    EndlessMode,
     InProgress,
     GameWin,
     GameLoss
+}
+
+public enum GameMode
+{
+    None,
+    MainGame,
+    EndlessMode
 }

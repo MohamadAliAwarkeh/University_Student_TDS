@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: 0
-  enemySpeed: 2
+  enemySpeed: 2.5
   firingRange: {fileID: 4861108869894289440, guid: cd2d2f3d087b9124e9c8ae737d6b7134, type: 3}
   tankBody: {fileID: 6805260421664312042}
 --- !u!114 &6165606898427899719
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   explosionVFX: {fileID: 8560193018011054886, guid: 8c2a78817aa51c24399adfd582c7148b, type: 3}
-  enemyController: {fileID: 1483042705, guid: c37728beeb1c3d742a6dcc2927c708da, type: 3}
+  enemyController: {fileID: 2919224977942329265}
 --- !u!1001 &764590152756102688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2199845696156390016}
     m_Modifications:
+    - target: {fileID: 6490803197951771518, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2919224977942329265}
     - target: {fileID: 6544214311518645312, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
       propertyPath: m_Name
       value: StandardWeapon_02
@@ -300,6 +304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8702602536903599819, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2919224977942329265}
     - target: {fileID: 8702602536903599819, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
       propertyPath: reloadingPeriod
       value: 2
@@ -375,13 +383,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 946400449267118325, guid: f0b2ade9107354446b76e5d90dcd8250, type: 3}
     - target: {fileID: 2357996510489136507, guid: c69481620c616cf40a546e136cec613b, type: 3}
+      propertyPath: weaponSpread
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357996510489136507, guid: c69481620c616cf40a546e136cec613b, type: 3}
       propertyPath: weaponFireRate
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2357996510489136507, guid: c69481620c616cf40a546e136cec613b, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2919224977942329265}
+    - target: {fileID: 2357996510489136507, guid: c69481620c616cf40a546e136cec613b, type: 3}
       propertyPath: reloadingPeriod
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4416590504712722669, guid: c69481620c616cf40a546e136cec613b, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2919224977942329265}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69481620c616cf40a546e136cec613b, type: 3}
 --- !u!4 &2186468549797764637 stripped
@@ -396,6 +416,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2199845696156390016}
     m_Modifications:
+    - target: {fileID: 6490803197951771518, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2919224977942329265}
     - target: {fileID: 6544214311518645312, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
       propertyPath: m_Name
       value: StandardWeapon_01
@@ -444,6 +468,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8702602536903599819, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 2919224977942329265}
     - target: {fileID: 8702602536903599819, guid: 8db164f1c33907440882af50111fbaa7, type: 3}
       propertyPath: reloadingPeriod
       value: 2

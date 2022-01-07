@@ -16,21 +16,29 @@ public class EnemyHealth : MonoBehaviour
     //Private Variables
     private bool spawnedVFX;
     private float timer;
-    private WaveSpawner waveSpawner;
+    [SerializeField]private WaveSpawner waveSpawner;
+    [SerializeField]private EndlessSpawner endlessSpawner;
+    private GameManager gameManager;
 
     private void Start()
     {
+        //Getting all the references
         timer = explosionVFX.GetComponent<DestroyVFX>().timer;
-        waveSpawner = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        //Dependent on the game, get the reference
+        if (gameManager.gameMode == GameMode.MainGame)
+            waveSpawner = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
+        if (gameManager.gameMode == GameMode.EndlessMode)
+            endlessSpawner = GameObject.Find("EndlessMode").GetComponent<EndlessSpawner>();
     }
 
     private void FixedUpdate() => CurrentHealth();
 
     private void CurrentHealth()
     {
-
         //When health reaches 0
-        if (health == 0)
+        if (health <= 0)
         {
             //Change enemy state
             enemyController.enemyState = EnemyState.Dead;
@@ -40,7 +48,7 @@ public class EnemyHealth : MonoBehaviour
                 //Change bool
                 spawnedVFX = true;
                 //Create VFX
-                GameObject vfx = Instantiate(explosionVFX, transform.position, Quaternion.identity);
+                Instantiate(explosionVFX, transform.position, Quaternion.identity);
             }
             //Call function
             Destroy();
@@ -53,8 +61,12 @@ public class EnemyHealth : MonoBehaviour
         //Destroy after particle completes
         if (timer <= 0)
         {
-            //Increment
-            waveSpawner.currentAmount++;
+            //Based on game state, increment respective values
+            if (gameManager.gameMode == GameMode.MainGame)
+                waveSpawner.currentAmount++;
+            if (gameManager.gameMode == GameMode.EndlessMode)
+                endlessSpawner.enemiesDestroyed++;
+
             //Destroy
             Destroy(gameObject);
         }

@@ -80,7 +80,7 @@ public class MenuButton : MonoBehaviour
     private void StartGame()
     {
         //Change state
-        gameManager.gameState = GameState.MainGame;
+        gameManager.gameMode = GameMode.MainGame;
         //Disable main menu
         mainMenu.SetActive(false);
         //Setting gamemode
@@ -90,7 +90,7 @@ public class MenuButton : MonoBehaviour
     private void StartEndlessMode()
     {
         //Change state
-        gameManager.gameState = GameState.EndlessMode;
+        gameManager.gameMode = GameMode.EndlessMode;
         //Disable main menu
         mainMenu.SetActive(false);
         //Setting gamemode
