@@ -16,7 +16,7 @@ public class HealthPickup : MonoBehaviour
 
     private void SetPickupValue()
     {
-        if (this.GetComponent<SpriteRenderer>().bounds.Intersects(playerHealth.GetComponent<SpriteRenderer>().bounds))
+        if (this.GetComponent<SpriteRenderer>().bounds.Intersects(playerHealth.GetComponent<SpriteRenderer>().bounds) && playerHealth.health != 6)
         {
             playerHealth.health += healthAmount;
             Destroy(gameObject);

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: 0
-  enemySpeed: 2
+  enemySpeed: 3
   firingRange: {fileID: 4861108869894289440}
   tankBody: {fileID: 1202857233152036618}
 --- !u!114 &6643133514939144010
@@ -67,6 +67,8 @@ MonoBehaviour:
   health: 2
   explosionVFX: {fileID: 8560193018011054886, guid: 8c2a78817aa51c24399adfd582c7148b, type: 3}
   enemyController: {fileID: 8190088534986450055}
+  waveSpawner: {fileID: 0}
+  endlessSpawner: {fileID: 0}
 --- !u!1 &7425684289951479433
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +262,10 @@ PrefabInstance:
       value: SMGWeapon_01
       objectReference: {fileID: 0}
     - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 946400449267118325, guid: e9b4b885ced6f7c4abe3c319a87e9373, type: 3}
+    - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
       propertyPath: enemyController
       value: 
       objectReference: {fileID: 8190088534986450055}
@@ -333,6 +339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SMGWeapon_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 946400449267118325, guid: e9b4b885ced6f7c4abe3c319a87e9373, type: 3}
     - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
       propertyPath: enemyController
       value: 

@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
     private bool spawnedVFX;
     private float timer;
     [SerializeField]private WaveSpawner waveSpawner;
-    [SerializeField]private EndlessSpawner endlessSpawner;
+    [SerializeField]private EndlessScoreboard endlessSpawner;
     private GameManager gameManager;
 
     private void Start()
@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour
         if (gameManager.gameMode == GameMode.MainGame)
             waveSpawner = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
         if (gameManager.gameMode == GameMode.EndlessMode)
-            endlessSpawner = GameObject.Find("EndlessMode").GetComponent<EndlessSpawner>();
+            endlessSpawner = GameObject.Find("EndlessMode").GetComponent<EndlessScoreboard>();
     }
 
     private void FixedUpdate() => CurrentHealth();

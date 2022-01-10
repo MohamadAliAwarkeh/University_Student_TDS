@@ -24,28 +24,28 @@ public class EndlessSpawner : MonoBehaviour
     public EndlessEnemyType base_EnemyType01;
     public EndlessEnemyType base_EnemyType02;
     public EndlessEnemyType base_EnemyType03;
-    public EndlessEnemyType base_Boss;
     [Space(10)]
     public EndlessEnemyType rare_EnemyType01;
     public EndlessEnemyType rare_EnemyType02;
     public EndlessEnemyType rare_EnemyType03;
-    public EndlessEnemyType rare_Boss;
     [Space(10)]
     public EndlessEnemyType legendary_EnemyType01;
     public EndlessEnemyType legendary_EnemyType02;
     public EndlessEnemyType legendary_EnemyType03;
-    public EndlessEnemyType legendary_Boss;
     [Space(10)]
     public EndlessEnemyType overheated_EnemyType01;
     public EndlessEnemyType overheated_EnemyType02;
     public EndlessEnemyType overheated_EnemyType03;
-    public EndlessEnemyType overheated_Boss;
 
-    [Header("Scoreboard")]
-    public int enemiesDestroyed;
+    [Header("Tier Weights")]
+    public int baseTierWeight;
+    public int rareTierWeight;
+    public int legendaryTierWeight;
+    public int overheatedTierWeight;
 
     [Header("References")]
     public Transform enemyParentObj;
+    public EndlessScoreboard endlessScoreboard;
 
     //Private Variables
     private float timer;
@@ -71,8 +71,74 @@ public class EndlessSpawner : MonoBehaviour
             //Reset timer
             timer = spawnTimer;
             //Call function
-
+            CalculateEnemyTierSpawnChance();
+            EnemyWeightChangeOvertime();
         }
+    }
+
+    /// <summary>
+    /// This function handles the randomisation of the different tiers of enemies that can be spawned.
+    /// We create a more 'organic' feeling of progressive difficulty increase with a weight system!
+    /// </summary>
+    private void CalculateEnemyTierSpawnChance()
+    {
+        //A local variable 
+        int maxTierWeight = baseTierWeight + rareTierWeight
+            + legendaryTierWeight + overheatedTierWeight;
+        //Then randomly pick a number between 1 and max tier weight
+        int randomValue = Random.Range(1, maxTierWeight);
+
+        //Then, based on the random number picked, it will spawn an enemy of the respective tier
+        if (randomValue <= baseTierWeight)
+            CalculateBaseEnemySpawnChance();
+        if (randomValue >= baseTierWeight && randomValue <= rareTierWeight)
+            CalculateRareEnemySpawnChance();
+        if (randomValue >= rareTierWeight && randomValue <= legendaryTierWeight)
+            CalculateLegendaryEnemySpawnChance();
+        if (randomValue >= legendaryTierWeight && randomValue <= overheatedTierWeight)
+            CalculateOverheatedEnemySpawnChance();
+    }
+
+    /// <summary>
+    ///This function simply calls each time there is an enemy spawned and changes the chances of enemies spawning
+    /// </summary>
+    private void EnemyWeightChangeOvertime()
+    {
+        if (endlessScoreboard.onGoingGameTimer >= 60)
+        {
+            //Increment the weights
+            baseTierWeight -= 5;
+            rareTierWeight += 5;
+        } 
+        if (endlessScoreboard.onGoingGameTimer >= 180)
+        {
+            //Increment the weights
+            baseTierWeight -= 5;
+            rareTierWeight -= 5;
+            legendaryTierWeight += 5;
+        }
+        if (endlessScoreboard.onGoingGameTimer >= 300)
+        {
+            //Increment the weights
+            rareTierWeight -= 5;
+            legendaryTierWeight -= 5;
+            overheatedTierWeight += 5;
+        }
+        if (endlessScoreboard.onGoingGameTimer >= 420)
+            overheatedTierWeight = 100;
+
+
+        //If base weight reaches 0, stop, and so on...
+        if (baseTierWeight <= 0) baseTierWeight = 0;
+        if (rareTierWeight <= 0) rareTierWeight = 0;
+        if (legendaryTierWeight <= 0) legendaryTierWeight = 0;
+        if (overheatedTierWeight <= 0) overheatedTierWeight = 0;
+
+        //We do the same if it reaches 100
+        if (baseTierWeight > 100) baseTierWeight = 100;
+        if (rareTierWeight > 100) rareTierWeight = 100;
+        if (legendaryTierWeight > 100) legendaryTierWeight = 100;
+        if (overheatedTierWeight > 100) overheatedTierWeight = 100;
     }
 
     #region Enemy Functions
@@ -83,7 +149,7 @@ public class EndlessSpawner : MonoBehaviour
     private void CalculateBaseEnemySpawnChance()
     {
         //A local variable to contain all enemy weights
-        int enemyWeights = base_Boss.maxSpawnWeight;
+        int enemyWeights = base_EnemyType03.maxSpawnWeight;
         //Then randomly pick a number between 0 and the max enemy weight
         int randomValue = Random.Range(0, enemyWeights);
 
@@ -109,18 +175,12 @@ public class EndlessSpawner : MonoBehaviour
             newEnemy = Instantiate(base_EnemyType03.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
             newEnemy.transform.parent = enemyParentObj.transform;
         }
-
-        if (randomValue >= base_Boss.minSpawnWeight && randomValue <= base_Boss.maxSpawnWeight)
-        {
-            newEnemy = Instantiate(base_Boss.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
-            newEnemy.transform.parent = enemyParentObj.transform;
-        }
     }
 
     private void CalculateRareEnemySpawnChance()
     {
         //A local variable to contain all enemy weights
-        int enemyWeights = base_Boss.maxSpawnWeight;
+        int enemyWeights = rare_EnemyType03.maxSpawnWeight;
         //Then randomly pick a number between 0 and the max enemy weight
         int randomValue = Random.Range(0, enemyWeights);
 
@@ -146,18 +206,12 @@ public class EndlessSpawner : MonoBehaviour
             newEnemy = Instantiate(rare_EnemyType03.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
             newEnemy.transform.parent = enemyParentObj.transform;
         }
-
-        if (randomValue >= rare_Boss.minSpawnWeight && randomValue <= rare_Boss.maxSpawnWeight)
-        {
-            newEnemy = Instantiate(rare_Boss.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
-            newEnemy.transform.parent = enemyParentObj.transform;
-        }
     }
 
     private void CalculateLegendaryEnemySpawnChance()
     {
         //A local variable to contain all enemy weights
-        int enemyWeights = base_Boss.maxSpawnWeight;
+        int enemyWeights = legendary_EnemyType03.maxSpawnWeight;
         //Then randomly pick a number between 0 and the max enemy weight
         int randomValue = Random.Range(0, enemyWeights);
 
@@ -183,18 +237,12 @@ public class EndlessSpawner : MonoBehaviour
             newEnemy = Instantiate(legendary_EnemyType03.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
             newEnemy.transform.parent = enemyParentObj.transform;
         }
-
-        if (randomValue >= legendary_Boss.minSpawnWeight && randomValue <= legendary_Boss.maxSpawnWeight)
-        {
-            newEnemy = Instantiate(legendary_Boss.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
-            newEnemy.transform.parent = enemyParentObj.transform;
-        }
     }
 
     private void CalculateOverheatedEnemySpawnChance()
     {
         //A local variable to contain all enemy weights
-        int enemyWeights = base_Boss.maxSpawnWeight;
+        int enemyWeights = overheated_EnemyType03.maxSpawnWeight;
         //Then randomly pick a number between 0 and the max enemy weight
         int randomValue = Random.Range(0, enemyWeights);
 
@@ -220,12 +268,6 @@ public class EndlessSpawner : MonoBehaviour
             newEnemy = Instantiate(overheated_EnemyType03.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
             newEnemy.transform.parent = enemyParentObj.transform;
         }
-
-        if (randomValue >= overheated_Boss.minSpawnWeight && randomValue <= overheated_Boss.maxSpawnWeight)
-        {
-            newEnemy = Instantiate(overheated_Boss.enemyPrefab, RandomSpawnPoint(Random.Range(0, spawnpointLength)).position, Quaternion.identity);
-            newEnemy.transform.parent = enemyParentObj.transform;
-        }
     }
     #endregion
 
@@ -245,22 +287,17 @@ public class EndlessSpawner : MonoBehaviour
     {
         Transform spawnPoint;
 
-        if (randomValue == 1)
+        if (randomValue == 0)
         {
             spawnPoint = spawnPointOne;
             return spawnPoint;
         }
-        if (randomValue == 2)
+        if (randomValue == 1)
         {
             spawnPoint = spawnPointTwo;
             return spawnPoint;
         }
-        if (randomValue == 3)
-        {
-            spawnPoint = spawnPointThree;
-            return spawnPoint;
-        }
-        if (randomValue == 3)
+        if (randomValue == 2)
         {
             spawnPoint = spawnPointThree;
             return spawnPoint;
@@ -272,35 +309,40 @@ public class EndlessSpawner : MonoBehaviour
         }
         if (randomValue == 4)
         {
-            spawnPoint = spawnPointFour;
+            spawnPoint = spawnPointThree;
             return spawnPoint;
         }
         if (randomValue == 5)
         {
-            spawnPoint = spawnPointFive;
+            spawnPoint = spawnPointFour;
             return spawnPoint;
         }
         if (randomValue == 6)
         {
-            spawnPoint = spawnPointSix;
+            spawnPoint = spawnPointFive;
             return spawnPoint;
         }
         if (randomValue == 7)
         {
-            spawnPoint = spawnPointSeven;
+            spawnPoint = spawnPointSix;
             return spawnPoint;
         }
         if (randomValue == 8)
         {
-            spawnPoint = spawnPointEight;
+            spawnPoint = spawnPointSeven;
             return spawnPoint;
         }
         if (randomValue == 9)
         {
-            spawnPoint = spawnPointNine;
+            spawnPoint = spawnPointEight;
             return spawnPoint;
         }
         if (randomValue == 10)
+        {
+            spawnPoint = spawnPointNine;
+            return spawnPoint;
+        }
+        if (randomValue == 11)
         {
             spawnPoint = spawnPointBoss;
             return spawnPoint;

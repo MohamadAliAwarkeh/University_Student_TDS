@@ -29,7 +29,7 @@ public class SelectButton : MonoBehaviour
         thisCol = this.GetComponentInChildren<SpriteRenderer>();
 
         //Get reference
-        colourblindManager = GameObject.Find("Accessibility").GetComponent<ColourblindManager>();
+        colourblindManager = GameObject.Find("GameManager").GetComponent<ColourblindManager>();
     }
 
     private void Update()

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1537775468365871489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 2360461364766799141}
   m_RootOrder: 2
@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6837231327791391563}
   - component: {fileID: 3209911321267146967}
+  - component: {fileID: 4463539841510528954}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -164,6 +165,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4463539841510528954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633087985577022948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rarity: 2
 --- !u!1 &3858379480454937092
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: 0
-  enemySpeed: 2
+  enemySpeed: 3
   firingRange: {fileID: 6765647211440640293}
   tankBody: {fileID: 2306097159783519996}
 --- !u!114 &8092064095783425703
@@ -227,9 +241,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aacd71edddafcc4fb9d6bcdefcf9438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   explosionVFX: {fileID: 8560193018011054886, guid: 8c2a78817aa51c24399adfd582c7148b, type: 3}
   enemyController: {fileID: 8092064095783425702}
+  waveSpawner: {fileID: 0}
+  endlessSpawner: {fileID: 0}
 --- !u!1 &6533597406197118258
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2461101413230106807}
   - component: {fileID: 1827820705008106563}
-  - component: {fileID: 2706715690108863729}
+  - component: {fileID: 2566340722898302955}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -301,7 +317,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 445274905
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0c7c1935f56230b4ea8fbe91cacf02ba, type: 3}
   m_Color: {r: 1, g: 0, b: 0.2, a: 0.6862745}
   m_FlipX: 0
@@ -313,7 +329,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2706715690108863729
+--- !u!114 &2566340722898302955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,9 +338,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6533597406197118258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58466c7ad8ebcd741a0fb3498d993763, type: 3}
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 2
 --- !u!1 &6795456867632984944
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,9 +490,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 946400449267118325, guid: 2ad9e0f299e4d0e4a9a7f495162595fe, type: 3}
+    - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: shootingPeriod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: weaponFireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
       propertyPath: enemyController
       value: 
       objectReference: {fileID: 8092064095783425702}
+    - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: reloadingPeriod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2631913381609789360, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
       propertyPath: m_Name
       value: SniperWeapon

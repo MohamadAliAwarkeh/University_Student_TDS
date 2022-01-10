@@ -15,12 +15,19 @@ public class EnemyStandardWeapon : Weapon
     private bool canShoot;
     private float timeToShoot;
     private float timeToReload;
+    private SpriteRenderer mySR;
+    private Color activeColour = new Color(1f, 1f, 1f);
+    private Color disabledColour = new Color(0.5f, 0.5f, 0.5f);
 
     private void Start()
     {
+        //Set values
         canShoot = true;
         timeToShoot = shootingPeriod;
         timeToReload = reloadingPeriod;
+
+        //Get reference
+        mySR = this.GetComponent<SpriteRenderer>();
     }
 
     public override void Update()
@@ -28,7 +35,10 @@ public class EnemyStandardWeapon : Weapon
         //Get inital information
         base.Update();
 
-        //set function
+        //Call functions based on the enemy state
+        if (enemyController.enemyState == EnemyState.Moving)
+            mySR.color = disabledColour;
+
         if (enemyController.enemyState == EnemyState.Shooting)
             HandleEnemyShooting();
 
@@ -40,6 +50,8 @@ public class EnemyStandardWeapon : Weapon
     {
         if (canShoot)
         {
+            //Set colour
+            mySR.color = activeColour;
             //Fire the weapon
             Shoot();
             //Count down time remaining to shoot

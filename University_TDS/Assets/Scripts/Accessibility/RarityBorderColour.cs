@@ -14,7 +14,7 @@ public class RarityBorderColour : MonoBehaviour
     private void Start()
     {
         //Get reference
-        colourblindManager = GameObject.Find("Accessibility").GetComponent<ColourblindManager>();
+        colourblindManager = GameObject.Find("GameManager").GetComponent<ColourblindManager>();
         mySR = this.GetComponent<SpriteRenderer>();
     }
 

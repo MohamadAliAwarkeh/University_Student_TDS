@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyState: 0
-  enemySpeed: 2
+  enemySpeed: 3.5
   firingRange: {fileID: 8787511533411318562}
   tankBody: {fileID: 3041279582300064776}
 --- !u!114 &7400686672047576136
@@ -64,9 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aacd71edddafcc4fb9d6bcdefcf9438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 4
   explosionVFX: {fileID: 8560193018011054886, guid: 8c2a78817aa51c24399adfd582c7148b, type: 3}
   enemyController: {fileID: 5416891146849773445}
+  waveSpawner: {fileID: 0}
+  endlessSpawner: {fileID: 0}
 --- !u!1 &4216956865166340115
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,8 +79,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4216956865166340108}
   - component: {fileID: 4216956865166340111}
-  - component: {fileID: 4216956865166340110}
-  - component: {fileID: 4216956865166340109}
+  - component: {fileID: 7688332957498163137}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -151,7 +152,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4216956865166340110
+--- !u!114 &7688332957498163137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,30 +161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4216956865166340115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80531cdf44d8d7c40b5eae3fce6acaad, type: 3}
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyController: {fileID: 5416891146849773445}
---- !u!114 &4216956865166340109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4216956865166340115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c22c607c063dbf458e1069523c41882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireFrom: {fileID: 0}
-  weaponFireRate: 0.5
-  weaponSpread: 10
-  muzzleFlash: {fileID: 7160724030623175820, guid: 6e01a36b76bc6944aaef85dc65fe0d40, type: 3}
-  bulletPrefab: {fileID: 946400449267118325, guid: 7b6b4a49c3299e2419d0efb6423efcca, type: 3}
-  shootingPeriod: 3
-  reloadingPeriod: 1.5
-  enemyController: {fileID: 5416891146849773445}
+  rarity: 0
 --- !u!1 &4216956866548442719
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4216956866548442712}
   - component: {fileID: 4216956866548442714}
-  - component: {fileID: 4216956866548442713}
+  - component: {fileID: 2354391938091050253}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -267,7 +248,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4216956866548442713
+--- !u!114 &2354391938091050253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,9 +257,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4216956866548442719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58466c7ad8ebcd741a0fb3498d993763, type: 3}
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 0
 --- !u!1 &5140497011723069098
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,8 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2688702588284053845}
   - component: {fileID: 8157012666429343706}
-  - component: {fileID: 8239407354364511259}
-  - component: {fileID: 4924680023423654516}
+  - component: {fileID: 408424254934779458}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -445,7 +426,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8239407354364511259
+--- !u!114 &408424254934779458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,30 +435,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5287598391622994896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80531cdf44d8d7c40b5eae3fce6acaad, type: 3}
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyController: {fileID: 5416891146849773445}
---- !u!114 &4924680023423654516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5287598391622994896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c22c607c063dbf458e1069523c41882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireFrom: {fileID: 0}
-  weaponFireRate: 0.5
-  weaponSpread: 10
-  muzzleFlash: {fileID: 7160724030623175820, guid: 6e01a36b76bc6944aaef85dc65fe0d40, type: 3}
-  bulletPrefab: {fileID: 946400449267118325, guid: 7b6b4a49c3299e2419d0efb6423efcca, type: 3}
-  shootingPeriod: 3
-  reloadingPeriod: 1.5
-  enemyController: {fileID: 5416891146849773445}
+  rarity: 0
 --- !u!1 &6739908875671844235
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,9 +546,29 @@ PrefabInstance:
       propertyPath: enemyController
       value: 
       objectReference: {fileID: 5416891146849773445}
+    - target: {fileID: 2269764295861854746, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269764295861854746, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2269764295861854746, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2822921253768818192, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
       propertyPath: m_Name
       value: SMGWeapon_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 946400449267118325, guid: c52c77183bf0a1e4a9c90dc109a1311a, type: 3}
+    - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: weaponSpread
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
       propertyPath: enemyController
@@ -662,6 +643,14 @@ PrefabInstance:
     - target: {fileID: 2822921253768818192, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
       propertyPath: m_Name
       value: SMGWeapon_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 946400449267118325, guid: c52c77183bf0a1e4a9c90dc109a1311a, type: 3}
+    - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
+      propertyPath: weaponSpread
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3034211425745043380, guid: 57a4af403a6d6ec419c0a3b2cb570975, type: 3}
       propertyPath: enemyController

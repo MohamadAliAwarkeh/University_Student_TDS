@@ -28,13 +28,12 @@ public class WaveSpawner : MonoBehaviour
     public GameObject enemyType01;
     public GameObject enemyType02;
     public GameObject enemyType03;
-    public GameObject boss;
 
     [Header("References")]
     public Transform enemyParentObj;
 
     //Private Variables
-    private int currentWave = 1;
+    private int currentWave = 0;
     private float timeBetweenWaves;
     private GameManager gameManager;
 
@@ -109,6 +108,10 @@ public class WaveSpawner : MonoBehaviour
     private void BeginWave(int i)
     {
         //Spawn wave based on currentWave 
+        if (i == 0)
+        {
+            SpawnEnemy(enemyType01, spawnPointBoss);
+        }
         if (i == 1)
         {
             SpawnEnemy(enemyType01, spawnPointOne);
@@ -118,22 +121,56 @@ public class WaveSpawner : MonoBehaviour
         {
             SpawnEnemy(enemyType01, spawnPointOne);
             SpawnEnemy(enemyType01, spawnPointFour);
-            SpawnEnemy(enemyType02, spawnPointSeven);
+            SpawnEnemy(enemyType01, spawnPointSeven);
         }
         if (i == 3)
         {
+            SpawnEnemy(enemyType01, spawnPointOne);
             SpawnEnemy(enemyType01, spawnPointFour);
             SpawnEnemy(enemyType01, spawnPointFive);
-            SpawnEnemy(enemyType03, spawnPointOne);
-            SpawnEnemy(enemyType03, spawnPointNine);
+            SpawnEnemy(enemyType01, spawnPointNine);
         }
         if (i == 4)
         {
-            SpawnEnemy(enemyType01, spawnPointOne);
-            SpawnEnemy(enemyType03, spawnPointNine);
-            SpawnEnemy(boss, spawnPointBoss);
+            SpawnEnemy(enemyType02, spawnPointBoss);
         }
         if (i == 5)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType02, spawnPointFour);
+        }
+        if (i == 6)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType01, spawnPointFour);
+            SpawnEnemy(enemyType02, spawnPointSeven);
+        }
+        if (i == 7)
+        {
+            SpawnEnemy(enemyType03, spawnPointBoss);
+        }
+        if (i == 8)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType01, spawnPointFour);
+            SpawnEnemy(enemyType03, spawnPointSeven);
+        }
+        if (i == 9)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType01, spawnPointFour);
+            SpawnEnemy(enemyType03, spawnPointFive);
+            SpawnEnemy(enemyType03, spawnPointNine);
+        }
+        if (i == 10)
+        {
+            SpawnEnemy(enemyType01, spawnPointOne);
+            SpawnEnemy(enemyType01, spawnPointFour);
+            SpawnEnemy(enemyType02, spawnPointSeven);
+            SpawnEnemy(enemyType03, spawnPointFive);
+            SpawnEnemy(enemyType03, spawnPointNine);
+        }
+        if (i == 11)
         {
             //A bit of a cheat, but when you complete all waves
             //increment one last time and change the game state

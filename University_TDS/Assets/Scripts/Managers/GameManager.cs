@@ -14,11 +14,13 @@ public class GameManager : MonoBehaviour
     public float timeBetweenWaves;
     [Space(5)]
     public TextMeshPro timerText;
+    public GameObject endlessTimerText;
 
     [Header("References To Panels")]
     public GameObject mainMenuPanel;
     public GameObject winPanel;
     public GameObject losePanel;
+    public GameObject endlessPanel;
 
     [Header("References To Gamemodes")]
     public GameObject waveMode;
@@ -37,18 +39,28 @@ public class GameManager : MonoBehaviour
         //Handles game states
         switch (gameState)
         {
-            case GameState.InProgress:
-                //This is for all the other classes to switch to this game state
-                break;
-
             case GameState.GameWin:
                 DisplayWinPanel();
                 Reset();
+
+                //Change gamemode
+                gameMode = GameMode.None;
                 break;
 
             case GameState.GameLoss:
                 DisplayLosePanel();
                 Reset();
+
+                //Change gamemode
+                gameMode = GameMode.None;
+                break;
+
+            case GameState.EndlessGameOver:
+                DisplayEndlessPanel();
+                Reset();
+
+                //Change gamemode
+                gameMode = GameMode.None;
                 break;
         }
 
@@ -63,6 +75,9 @@ public class GameManager : MonoBehaviour
             //Set to this state from the MenuButton.cs
             case GameMode.EndlessMode:
                 GameCountdown();
+
+                //Endable endless mode text
+                endlessTimerText.SetActive(true);
                 break;
         }
     }
@@ -77,8 +92,6 @@ public class GameManager : MonoBehaviour
         //If timer reaches 0, then...
         if (timer <= 0)
         {
-            //Reset timer
-            timer = timeBetweenWaves;
             //Disable text
             timerText.gameObject.SetActive(false);
             //Change state
@@ -97,6 +110,8 @@ public class GameManager : MonoBehaviour
     private void DisplayLosePanel() => losePanel.SetActive(true);
 
     private void DisplayWinPanel() => winPanel.SetActive(true);
+
+    private void DisplayEndlessPanel() => endlessPanel.SetActive(true);
     #endregion
 
 }
@@ -106,7 +121,8 @@ public enum GameState
     MainMenu,
     InProgress,
     GameWin,
-    GameLoss
+    GameLoss,
+    EndlessGameOver
 }
 
 public enum GameMode

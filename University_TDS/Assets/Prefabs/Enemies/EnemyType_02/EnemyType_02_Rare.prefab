@@ -66,6 +66,8 @@ MonoBehaviour:
   health: 2
   explosionVFX: {fileID: 8560193018011054886, guid: 8c2a78817aa51c24399adfd582c7148b, type: 3}
   enemyController: {fileID: 5881643181244636934}
+  waveSpawner: {fileID: 0}
+  endlessSpawner: {fileID: 0}
 --- !u!1 &3784224904806903841
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 3784224904806903841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 76852833378843781}
   m_RootOrder: 2
@@ -158,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8404694272843165739}
   - component: {fileID: 7302663260859664786}
-  - component: {fileID: 458611184825842297}
+  - component: {fileID: 8370423052748763988}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -219,7 +221,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 445274905
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0c7c1935f56230b4ea8fbe91cacf02ba, type: 3}
   m_Color: {r: 0, g: 1, b: 1, a: 0.6862745}
   m_FlipX: 0
@@ -231,7 +233,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &458611184825842297
+--- !u!114 &8370423052748763988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,9 +242,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4585519718413189744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58466c7ad8ebcd741a0fb3498d993763, type: 3}
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 0
 --- !u!1 &9098354116572267550
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5454640178199920170}
   - component: {fileID: 8595217892847993825}
+  - component: {fileID: 7856254739097817867}
   m_Layer: 0
   m_Name: rarityBorder
   m_TagString: Untagged
@@ -325,6 +329,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7856254739097817867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098354116572267550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a956b8932e4a2ac47aa57b5de0c2bbbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rarity: 0
 --- !u!1 &9195596312101452496
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 946400449267118325, guid: be4aa60cb7903fa4eafc834ea0b5acaa, type: 3}
     - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
       propertyPath: enemyController
       value: 
