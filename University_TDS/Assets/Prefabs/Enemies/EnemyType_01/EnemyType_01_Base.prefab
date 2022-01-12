@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 7968138036716563818}
   - component: {fileID: 323177998}
   - component: {fileID: 323177997}
+  - component: {fileID: 1964599334355389582}
   m_Layer: 0
   m_Name: EnemyType_01_Base
   m_TagString: Untagged
@@ -297,6 +298,19 @@ MonoBehaviour:
   enemyController: {fileID: 323177998}
   waveSpawner: {fileID: 0}
   endlessSpawner: {fileID: 0}
+--- !u!114 &1964599334355389582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659932336216870179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f8c01a02cc26f4d8c050f0dc60d724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySR: {fileID: 8081859288907071974}
 --- !u!1001 &6490803197386845835
 PrefabInstance:
   m_ObjectHideFlags: 0

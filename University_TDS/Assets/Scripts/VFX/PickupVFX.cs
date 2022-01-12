@@ -13,17 +13,28 @@ public class PickupVFX : MonoBehaviour
     [Header("Bounce VFX")]
     public float originalScale;
 
+    //Private varialbes
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();   
+    }
+
     public void Update()
     {
-        switch (visualStyle)
+        if (gameManager.gameState == GameState.InProgress)
         {
-            case VisualStyle.Spin_VFX:
-                SubscribeSpinEffect();
-                break;
+            switch (visualStyle)
+            {
+                case VisualStyle.Spin_VFX:
+                    SubscribeSpinEffect();
+                    break;
 
-            case VisualStyle.Bounce_VFX:
-                SubscribeBounceEffect();
-                break;
+                case VisualStyle.Bounce_VFX:
+                    SubscribeBounceEffect();
+                    break;
+            }
         }
     }
 

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     [Header("References To Panels")]
     public GameObject mainMenuPanel;
+    public GameObject pausePanel;
     public GameObject winPanel;
     public GameObject losePanel;
     public GameObject endlessPanel;
@@ -28,39 +29,35 @@ public class GameManager : MonoBehaviour
 
     //Private Variables
     private float timer;
+    private bool pauseMenuActive;
 
-    private void Start()
-    {
-        timer = timeBetweenWaves;
-    }
+    private void Start() => timer = timeBetweenWaves;
 
-    void Update()
+    private void Update()
     {
+        //Call functions
+        PauseMenu();
+
         //Handles game states
         switch (gameState)
         {
             case GameState.GameWin:
                 DisplayWinPanel();
                 Reset();
-
-                //Change gamemode
-                gameMode = GameMode.None;
                 break;
 
             case GameState.GameLoss:
                 DisplayLosePanel();
                 Reset();
-
-                //Change gamemode
-                gameMode = GameMode.None;
                 break;
 
             case GameState.EndlessGameOver:
                 DisplayEndlessPanel();
                 Reset();
+                break;
 
-                //Change gamemode
-                gameMode = GameMode.None;
+            case GameState.Pause:
+                Reset();
                 break;
         }
 
@@ -99,13 +96,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Reset()
-    {
-        //If any input is detected, reset
-        if (Input.anyKeyDown)
-            SceneManager.LoadScene(0);
-    }
-
     #region Panel Functions
     private void DisplayLosePanel() => losePanel.SetActive(true);
 
@@ -113,6 +103,33 @@ public class GameManager : MonoBehaviour
 
     private void DisplayEndlessPanel() => endlessPanel.SetActive(true);
     #endregion
+
+    private void PauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            pauseMenuActive = !pauseMenuActive;
+
+        if (pauseMenuActive && gameState == GameState.InProgress)
+        {
+            gameState = GameState.Pause;
+            pausePanel.SetActive(true);
+        }
+        if (!pauseMenuActive && gameState == GameState.Pause)
+        {
+            gameState = GameState.InProgress;
+            pausePanel.SetActive(false);
+        }
+    }
+
+    private void Reset()
+    {
+        //If any input is detected, reset
+        if (Input.GetKeyDown(KeyCode.Space))
+            SceneManager.LoadScene(0);
+
+        //Change gamemode
+        gameMode = GameMode.None;
+    }
 
 }
 
@@ -122,7 +139,8 @@ public enum GameState
     InProgress,
     GameWin,
     GameLoss,
-    EndlessGameOver
+    EndlessGameOver,
+    Pause
 }
 
 public enum GameMode

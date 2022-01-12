@@ -18,6 +18,7 @@ public class EnemyStandardWeapon : Weapon
     private SpriteRenderer mySR;
     private Color activeColour = new Color(1f, 1f, 1f);
     private Color disabledColour = new Color(0.5f, 0.5f, 0.5f);
+    private GameManager gameManager;
 
     private void Start()
     {
@@ -28,22 +29,26 @@ public class EnemyStandardWeapon : Weapon
 
         //Get reference
         mySR = this.GetComponent<SpriteRenderer>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public override void Update()
     {
-        //Get inital information
-        base.Update();
+        if (gameManager.gameState == GameState.InProgress)
+        {
+            //Get inital information
+            base.Update();
 
-        //Call functions based on the enemy state
-        if (enemyController.enemyState == EnemyState.Moving)
-            mySR.color = disabledColour;
+            //Call functions based on the enemy state
+            if (enemyController.enemyState == EnemyState.Moving)
+                mySR.color = disabledColour;
 
-        if (enemyController.enemyState == EnemyState.Shooting)
-            HandleEnemyShooting();
+            if (enemyController.enemyState == EnemyState.Shooting)
+                HandleEnemyShooting();
 
-        if (enemyController.enemyState == EnemyState.Reloading)
-            HandleEnemyReload();
+            if (enemyController.enemyState == EnemyState.Reloading)
+                HandleEnemyReload();
+        }    
     }
 
     public void HandleEnemyShooting()

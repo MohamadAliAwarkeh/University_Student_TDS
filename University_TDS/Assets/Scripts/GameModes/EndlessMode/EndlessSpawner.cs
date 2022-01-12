@@ -50,14 +50,20 @@ public class EndlessSpawner : MonoBehaviour
     //Private Variables
     private float timer;
     private int spawnpointLength = 10;
+    private GameManager gameManager;
 
     private void Start()
     {
         //Setting timer
         timer = spawnTimer;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    private void FixedUpdate() => SpawnEnemy();
+    private void FixedUpdate()
+    {
+        if (gameManager.gameState == GameState.InProgress) 
+            SpawnEnemy();
+    }
 
     /// <summary>
     /// This function is the TOP of the hierarchy! This is where all the enemies  actually spawn

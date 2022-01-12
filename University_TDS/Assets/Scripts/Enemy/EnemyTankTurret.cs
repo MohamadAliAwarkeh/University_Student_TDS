@@ -9,12 +9,17 @@ public class EnemyTankTurret : MonoBehaviour
 
     //Private Variables
     private Transform player;
+    private GameManager gameManager;
 
-    private void Start() => player = GameObject.Find("Player").GetComponent<Transform>();
+    private void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<Transform>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     private void Update()
     {
-        if (enemyController.enemyState == EnemyState.Shooting)
+        if (gameManager.gameState == GameState.InProgress)
             TankTurretRotation();
     }
 

@@ -18,18 +18,22 @@ public class EndlessScoreboard : MonoBehaviour
     [HideInInspector] public float onGoingGameTimer;
     [HideInInspector] public int enemiesDestroyed;
 
+    private void Start() => gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
     private void Update()
     {
-        //Call functions
-        if (gameManager.gameMode == GameMode.None)
+        if (gameManager.gameState == GameState.InProgress)
         {
-            //Do nothing
-        }
-        else if (gameManager.gameMode == GameMode.EndlessMode)
-        {
-            //Call functions
-            GameTimer();
-            EndGamePanelDisplay();
+            if (gameManager.gameMode == GameMode.None)
+            {
+                //Do nothing
+            }
+            else if (gameManager.gameMode == GameMode.EndlessMode)
+            {
+                //Call functions
+                GameTimer();
+                EndGamePanelDisplay();
+            }
         }
     }
 

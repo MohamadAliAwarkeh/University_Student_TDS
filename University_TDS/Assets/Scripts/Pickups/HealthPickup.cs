@@ -16,9 +16,12 @@ public class HealthPickup : MonoBehaviour
 
     private void SetPickupValue()
     {
+        //If the pickup and the player collide
         if (this.GetComponent<SpriteRenderer>().bounds.Intersects(playerHealth.GetComponent<SpriteRenderer>().bounds) && playerHealth.health != 6)
         {
+            //Give the player the respective health
             playerHealth.health += healthAmount;
+            //Destroy obj
             Destroy(gameObject);
         }
     }

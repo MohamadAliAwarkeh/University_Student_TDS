@@ -20,7 +20,6 @@ public class Weapon : MonoBehaviour
     //Private Variables
     private float fireRateCount;
     private float weaponSpreadWidth;
-    private int bulletsCreated;
 
     public virtual void Update()
     {
@@ -36,20 +35,20 @@ public class Weapon : MonoBehaviour
             //Reset
             fireRateCount = weaponFireRate;
             //Call function
-            InstantiateBullet();
+            InstantiateBullet(bulletPrefab);
         }
     }
 
-    public void InstantiateBullet()
+    public void InstantiateBullet(GameObject bullet)
     {
         //Call Function
         CreateMuzzleFlash();
         //Set spread
         weaponSpreadWidth = Random.Range(-weaponSpread, weaponSpread);
         //Create bullet
-        GameObject newBullet = Instantiate(bulletPrefab, fireFrom.position, fireFrom.rotation);
+        Instantiate(bullet, fireFrom.position, fireFrom.rotation);
         //Apply spread
-        newBullet.transform.Rotate(0f, 0f, weaponSpreadWidth);
+        bullet.transform.Rotate(0f, 0f, weaponSpreadWidth);
     }
 
     private void CreateMuzzleFlash()

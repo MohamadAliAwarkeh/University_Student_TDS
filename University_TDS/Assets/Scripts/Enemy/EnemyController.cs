@@ -17,34 +17,39 @@ public class EnemyController : MonoBehaviour
 
     //Private Variables
     private GameObject player;
+    private GameManager gameManager;
 
     private void Start()
     {
         player = GameObject.Find("Player");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
     {
-        switch (enemyState)
+        if (gameManager.gameState == GameState.InProgress)
         {
-            case EnemyState.Moving:
-                EnemyMove();
-                break;
+            switch (enemyState)
+            {
+                case EnemyState.Moving:
+                    EnemyMove();
+                    break;
 
-            case EnemyState.Shooting:
-                //Function is called in the EnemyTankTurret.cs
-                break;
+                case EnemyState.Shooting:
+                    //Function is called in the EnemyTankTurret.cs
+                    break;
 
-            case EnemyState.Reloading:
-                //Functions are called in the EnemyStandardWeapon.cs
-                break;
+                case EnemyState.Reloading:
+                    //Functions are called in the EnemyStandardWeapon.cs
+                    break;
 
-            case EnemyState.Dead:
-                break;
+                case EnemyState.Dead:
+                    break;
+            }
         }
     }
 
-    private void EnemyMove()
+    public void EnemyMove()
     {
         //Call function
         tankBody.TankBodyRotation();

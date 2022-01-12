@@ -6,7 +6,8 @@ public class EnemyStandardBullet : Bullet
 {
     //Private Variables
     public SpriteRenderer playerCol;
-    public PlayerHealth playerHealth;
+    private PlayerHealth playerHealth;
+    private GameManager gameManager;
 
     public override void Start()
     {
@@ -15,14 +16,18 @@ public class EnemyStandardBullet : Bullet
         //Setting references
         playerCol = GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>();
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public override void Update()
     {
-        //Get parent info
-        base.Update();
-        //Call function
-        DetectCollision();
+        if (gameManager.gameState == GameState.InProgress)
+        {
+            //Get parent info
+            base.Update();
+            //Call function
+            DetectCollision();
+        }      
     }
 
     private void DetectCollision()

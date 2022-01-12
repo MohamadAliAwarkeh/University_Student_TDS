@@ -79,7 +79,7 @@ public class PlayerHealth : MonoBehaviour
             health2.sprite = emptyHeart;
             health1.sprite = halfHeart;
         }
-        else if (health == 0)
+        else if (health <= 0)
         {
             health3.sprite = emptyHeart;
             health2.sprite = emptyHeart;

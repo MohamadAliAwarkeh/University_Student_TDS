@@ -10,6 +10,7 @@ public class StandardBullet : Bullet
     private int enemiesMax;
     private SpriteRenderer enemy;
     private EnemyHealth enemyHealth;
+    private GameManager gameManager;
 
     public override void Start()
     {
@@ -18,14 +19,19 @@ public class StandardBullet : Bullet
         //Setting references
         enemyParentObj = GameObject.Find("EnemyParentObj").transform;
         enemiesMax = enemyParentObj.childCount;
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();  
     }
 
     public override void Update()
     {
-        //Get parent info
-        base.Update();
-        //Call function
-        CalculateCollision();
+        if (gameManager.gameState == GameState.InProgress)
+        {
+            //Get parent info
+            base.Update();
+            //Call function
+            CalculateCollision();
+        }
     }
 
     private void CalculateCollision()
