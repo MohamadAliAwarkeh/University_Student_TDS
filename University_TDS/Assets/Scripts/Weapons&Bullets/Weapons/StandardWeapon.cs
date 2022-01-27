@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class StandardWeapon : Weapon
 {
-    [Header("Player Bullets")]
-    public GameObject standardBullet;
-    public GameObject sniperBullet;
-    public GameObject bigBullet;
 
     //Private variables
     private GameManager gameManager;

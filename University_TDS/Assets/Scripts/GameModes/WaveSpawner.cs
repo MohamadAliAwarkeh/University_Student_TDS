@@ -181,6 +181,7 @@ public class WaveSpawner : MonoBehaviour
         requiredAmount = enemyParentObj.childCount;
         //Change state
         waveState = WaveState.InProgress;
+        SpawnEnemy(enemyType01, spawnPointBoss);
     }
 
     // Simple function that takes two parameters for ease of creating enemies

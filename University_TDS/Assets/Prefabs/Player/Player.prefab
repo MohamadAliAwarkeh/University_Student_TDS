@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2372121409114184102}
   - component: {fileID: 2372121409114184103}
   m_Layer: 0
-  m_Name: Body
+  m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,9 +108,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireFrom: {fileID: 4290411470575036943}
+  isSpreadWeaapon: 0
+  fireFrom01: {fileID: 0}
+  fireFrom02: {fileID: 0}
   weaponFireRate: 0.75
   weaponSpread: 5
-  bulletsPerShot: 5
   muzzleFlash: {fileID: 7160724030623175820, guid: 6e01a36b76bc6944aaef85dc65fe0d40, type: 3}
   bulletPrefab: {fileID: 946400449267118325, guid: b3ee4e70b9b91f34f966a5c79aabc04c, type: 3}
 --- !u!1 &2372121409601063263
@@ -144,7 +146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2372121409114184097}
-  - {fileID: 2372121409237070012}
+  - {fileID: 6257875490521549157}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -212,6 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  tankBody: {fileID: 2372121409114184103}
+  tankTurret: {fileID: 2372121409237070002}
 --- !u!114 &2372121409601063250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,19 +228,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7e24555ee404c4db1b717fe4cbbc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 6
   health1: {fileID: 0}
   health2: {fileID: 0}
   health3: {fileID: 0}
   fullHeart: {fileID: 21300000, guid: efd967b3615ac6247ba9a131ec811954, type: 3}
   halfHeart: {fileID: 21300000, guid: 86d063d1eb128f54082cadef017feb20, type: 3}
   emptyHeart: {fileID: 21300000, guid: a9f67cb2d9bc9e947956518a8f3377f2, type: 3}
+--- !u!1 &8170636785609314975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6257875490521549157}
+  m_Layer: 0
+  m_Name: WeaponPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6257875490521549157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170636785609314975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2372121409237070012}
+  m_Father: {fileID: 2372121409601063260}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4290411470154758735
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2372121409601063260}
+    m_TransformParent: {fileID: 6257875490521549157}
     m_Modifications:
     - target: {fileID: 423039040, guid: 0bc848dba2d1b2a4ea425a84807b77cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -256,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1973119085444680435, guid: 0bc848dba2d1b2a4ea425a84807b77cf, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1973119085444680435, guid: 0bc848dba2d1b2a4ea425a84807b77cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -323,6 +358,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1973119085444680435, guid: 0bc848dba2d1b2a4ea425a84807b77cf, type: 3}
   m_PrefabInstance: {fileID: 4290411470154758735}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2372121409237070002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1973119085444680445, guid: 0bc848dba2d1b2a4ea425a84807b77cf, type: 3}
+  m_PrefabInstance: {fileID: 4290411470154758735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372121409237070015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057b37abe30065e46be617499db31eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4290411470575036943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 423039040, guid: 0bc848dba2d1b2a4ea425a84807b77cf, type: 3}
