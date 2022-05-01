@@ -7,11 +7,6 @@ public class Weapon : MonoBehaviour
     [Header("General Settings")]
     public Transform fireFrom;
 
-    [Header("MultiShot weapon")]
-    public bool isSpreadWeaapon;
-    public Transform fireFrom01;
-    public Transform fireFrom02;
-
     [Header("Weapon Settings")]
     public float weaponFireRate;
     public float weaponSpread;
@@ -51,14 +46,7 @@ public class Weapon : MonoBehaviour
         //Set spread
         weaponSpreadWidth = Random.Range(-weaponSpread, weaponSpread);
         //Create bullet
-        if (isSpreadWeaapon)
-        {
-            Instantiate(bullet, fireFrom.position, fireFrom.rotation);
-            Instantiate(bullet, fireFrom.position, fireFrom01.rotation);
-            Instantiate(bullet, fireFrom.position, fireFrom02.rotation);
-        }
-        else
-            Instantiate(bullet, fireFrom.position, fireFrom.rotation);
+        Instantiate(bullet, fireFrom.position, fireFrom.rotation);
         //Apply spread
         bullet.transform.Rotate(0f, 0f, weaponSpreadWidth);
     }

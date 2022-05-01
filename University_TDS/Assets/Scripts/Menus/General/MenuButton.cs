@@ -21,6 +21,7 @@ public class MenuButton : MonoBehaviour
     public GameManager gameManager;
     [Space(5)]
     public GameObject mainMenu;
+    public GameObject loadoutPanel;
     public GameObject controlsPanel;
     public GameObject accessibilityPanel;
 
@@ -53,6 +54,10 @@ public class MenuButton : MonoBehaviour
                     StartEndlessMode();
                     break;
 
+                case ButtonTypes.Loadout:
+                    DisplayLoadoutPanel();
+                    break;
+
                 case ButtonTypes.Controls:
                     DisplayControlsPanel();
                     break;
@@ -82,7 +87,7 @@ public class MenuButton : MonoBehaviour
         //Change state
         gameManager.gameMode = GameMode.MainGame;
         //Disable main menu
-        mainMenu.SetActive(false);
+        loadoutPanel.SetActive(false);
         //Setting gamemode
         gameManager.waveMode.SetActive(true);
     }
@@ -92,9 +97,17 @@ public class MenuButton : MonoBehaviour
         //Change state
         gameManager.gameMode = GameMode.EndlessMode;
         //Disable main menu
-        mainMenu.SetActive(false);
+        loadoutPanel.SetActive(false);
         //Setting gamemode
         gameManager.endlessMode.SetActive(true);
+    }
+
+    private void DisplayLoadoutPanel()
+    {
+        //Disable main menu
+        mainMenu.SetActive(false);
+        //Display controls panel
+        loadoutPanel.SetActive(true);
     }
 
     private void DisplayControlsPanel()
@@ -118,6 +131,7 @@ public class MenuButton : MonoBehaviour
         //Display main menu
         mainMenu.SetActive(true);
         //Disable other panels
+        loadoutPanel.SetActive(false);
         controlsPanel.SetActive(false);
         accessibilityPanel.SetActive(false);
     }
@@ -152,6 +166,7 @@ public enum ButtonTypes
 {
     StartGame,
     EndlessMode,
+    Loadout,
     Controls,
     Accessibility,
     MainMenu,

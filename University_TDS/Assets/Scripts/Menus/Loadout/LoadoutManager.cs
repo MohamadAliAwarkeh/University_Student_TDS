@@ -27,12 +27,23 @@ public class LoadoutManager : MonoBehaviour
     public TextMeshPro bulletSpreadStatText;
     public TextMeshPro bulletRangeStatText;
 
+    [Header("Sprites")]
+    public Sprite bullet01Sprite;
+    public Sprite bullet02Sprite;
+    public Sprite bullet03Sprite;
+
     [Header("References")]
     public SpriteRenderer mouseCol;
 
     //Private variables
     private int currentTankSelection = 0;
     private int currentTurretselection = 0;
+    private HandleLoadout handleLoadout;
+
+    private void Start()
+    {
+        handleLoadout = GetComponent<HandleLoadout>();
+    }
 
     private void Update()
     {
@@ -70,7 +81,12 @@ public class LoadoutManager : MonoBehaviour
             tankBodyNameText.SetText(tankBodySelection.tankBodyName01);
             //Change tank stat values
             tankSpeedStatText.SetText(tankBodySelection.tankSpeedStat01.ToString());
-            tankHealthStatText.SetText(tankBodySelection.tankSpeedStat01.ToString());
+            tankHealthStatText.SetText(tankBodySelection.tankHealthStat01.ToString());
+
+            //Change tank
+            handleLoadout.tankBody.sprite = tankBodySelection.tankBody01;
+            handleLoadout.playerController.moveSpeed = tankBodySelection.tankSpeedStat01;
+            handleLoadout.playerHealth.health = tankBodySelection.tankHealthStat01;
         }
         if (currentTankSelection == 1)
         {
@@ -80,7 +96,12 @@ public class LoadoutManager : MonoBehaviour
             tankBodyNameText.SetText(tankBodySelection.tankBodyName02);
             //Change tank stat values
             tankSpeedStatText.SetText(tankBodySelection.tankSpeedStat02.ToString());
-            tankHealthStatText.SetText(tankBodySelection.tankSpeedStat02.ToString());
+            tankHealthStatText.SetText(tankBodySelection.tankHealthStat02.ToString());
+
+            //Change tank
+            handleLoadout.tankBody.sprite = tankBodySelection.tankBody02;
+            handleLoadout.playerController.moveSpeed = tankBodySelection.tankSpeedStat02;
+            handleLoadout.playerHealth.health = tankBodySelection.tankHealthStat02;
         }
         if (currentTankSelection == 2)
         {
@@ -90,7 +111,12 @@ public class LoadoutManager : MonoBehaviour
             tankBodyNameText.SetText(tankBodySelection.tankBodyName03);
             //Change tank stat values
             tankSpeedStatText.SetText(tankBodySelection.tankSpeedStat03.ToString());
-            tankHealthStatText.SetText(tankBodySelection.tankSpeedStat03.ToString());
+            tankHealthStatText.SetText(tankBodySelection.tankHealthStat03.ToString());
+
+            //Change tank
+            handleLoadout.tankBody.sprite = tankBodySelection.tankBody03;
+            handleLoadout.playerController.moveSpeed = tankBodySelection.tankSpeedStat03;
+            handleLoadout.playerHealth.health = tankBodySelection.tankHealthStat03;
         }
     }
     #endregion
@@ -127,7 +153,15 @@ public class LoadoutManager : MonoBehaviour
             weaponDamageStatText.SetText(tankTurretSelection.weaponDamageStat01.ToString());
             weaponFireRateStatText.SetText(tankTurretSelection.weaponFireRateStat01.ToString());
             bulletSpreadStatText.SetText(tankTurretSelection.bulletSpreadStat01.ToString());
-            bulletRangeStatText.SetText(tankTurretSelection.bulletRangeStat01.ToString());  
+            bulletRangeStatText.SetText(tankTurretSelection.bulletRangeStat01.ToString());
+
+            //Set values
+            handleLoadout.tankTurret.sprite = tankTurretSelection.tankTurret01;
+            handleLoadout.weapon.bulletPrefab.GetComponent<Bullet>().bulletDamage = (int)tankTurretSelection.weaponDamageStat01;
+            handleLoadout.weapon.weaponFireRate = tankTurretSelection.weaponFireRateStat01;
+            handleLoadout.weapon.weaponSpread = tankTurretSelection.bulletSpreadStat01;
+            handleLoadout.weapon.bulletPrefab.GetComponent<Bullet>().bulletRange = tankTurretSelection.bulletRangeStat01;
+            handleLoadout.weapon.bulletPrefab.GetComponent<SpriteRenderer>().sprite = bullet01Sprite;
         }
         if (currentTurretselection == 1)
         {
@@ -140,6 +174,14 @@ public class LoadoutManager : MonoBehaviour
             weaponFireRateStatText.SetText(tankTurretSelection.weaponFireRateStat02.ToString());
             bulletSpreadStatText.SetText(tankTurretSelection.bulletSpreadStat02.ToString());
             bulletRangeStatText.SetText(tankTurretSelection.bulletRangeStat02.ToString());
+
+            //Set values
+            handleLoadout.tankTurret.sprite = tankTurretSelection.tankTurret02;
+            handleLoadout.weapon.bulletPrefab.GetComponent<Bullet>().bulletDamage = (int)tankTurretSelection.weaponDamageStat02;
+            handleLoadout.weapon.weaponFireRate = tankTurretSelection.weaponFireRateStat02;
+            handleLoadout.weapon.weaponSpread = tankTurretSelection.bulletSpreadStat02;
+            handleLoadout.weapon.bulletPrefab.GetComponent<Bullet>().bulletRange = tankTurretSelection.bulletRangeStat02;
+            handleLoadout.weapon.bulletPrefab.GetComponent<SpriteRenderer>().sprite = bullet02Sprite;
         }
         if (currentTurretselection == 2)
         {
@@ -152,6 +194,14 @@ public class LoadoutManager : MonoBehaviour
             weaponFireRateStatText.SetText(tankTurretSelection.weaponFireRateStat03.ToString());
             bulletSpreadStatText.SetText(tankTurretSelection.bulletSpreadStat03.ToString());
             bulletRangeStatText.SetText(tankTurretSelection.bulletRangeStat03.ToString());
+
+            //Set values
+            handleLoadout.tankTurret.sprite = tankTurretSelection.tankTurret03;
+            handleLoadout.weapon.bulletPrefab.GetComponent<Bullet>().bulletDamage = (int)tankTurretSelection.weaponDamageStat03;
+            handleLoadout.weapon.weaponFireRate = tankTurretSelection.weaponFireRateStat03;
+            handleLoadout.weapon.weaponSpread = tankTurretSelection.bulletSpreadStat03;
+            handleLoadout.weapon.bulletPrefab.GetComponent<Bullet>().bulletRange = tankTurretSelection.bulletRangeStat03;
+            handleLoadout.weapon.bulletPrefab.GetComponent<SpriteRenderer>().sprite = bullet03Sprite;
         }
     }
     #endregion

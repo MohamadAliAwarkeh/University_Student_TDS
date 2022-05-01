@@ -116,21 +116,21 @@ public class EndlessSpawner : MonoBehaviour
             baseTierWeight -= 5;
             rareTierWeight += 5;
         } 
-        if (endlessScoreboard.onGoingGameTimer >= 180)
+        if (endlessScoreboard.onGoingGameTimer >= 160)
         {
             //Increment the weights
             baseTierWeight -= 5;
             rareTierWeight -= 5;
             legendaryTierWeight += 5;
         }
-        if (endlessScoreboard.onGoingGameTimer >= 300)
+        if (endlessScoreboard.onGoingGameTimer >= 260)
         {
             //Increment the weights
             rareTierWeight -= 5;
             legendaryTierWeight -= 5;
             overheatedTierWeight += 5;
         }
-        if (endlessScoreboard.onGoingGameTimer >= 420)
+        if (endlessScoreboard.onGoingGameTimer >= 360)
             overheatedTierWeight = 100;
 
 

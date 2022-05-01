@@ -91,10 +91,14 @@ public class PlayerHealth : MonoBehaviour
 
     private void PlayerDead()
     {
-        //Change game state
-        if (gameManager.gameMode == GameMode.MainGame)
-            gameManager.gameState = GameState.GameLoss;
-        else if (gameManager.gameMode == GameMode.EndlessMode)
-            gameManager.gameState = GameState.EndlessGameOver;
+
+        if (gameManager.gameState == GameState.InProgress)
+        {
+            //Change game state
+            if (gameManager.gameMode == GameMode.MainGame)
+                gameManager.gameState = GameState.GameLoss;
+            else if (gameManager.gameMode == GameMode.EndlessMode)
+                gameManager.gameState = GameState.EndlessGameOver;
+        }
     }
 }

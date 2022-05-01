@@ -7,9 +7,6 @@ public class RandomisePickup : MonoBehaviour
     [Header("Obj Pickup")]
     public GameObject prefabObj01;
     public GameObject prefabObj02;
-    public GameObject prefabObj03;
-    public GameObject prefabObj04;
-    public GameObject prefabObj05;
     [Space(10)]
     public float timeBetweenSpawns;
 
@@ -51,7 +48,7 @@ public class RandomisePickup : MonoBehaviour
     private void RandomisePickupObj()
     {
         //Randomise number
-        int randomValue = Random.Range(0, 4);
+        int randomValue = Random.Range(0, 1);
         //Randomise positions
         float x = Random.Range(-15f, 15f);
         float y = Random.Range(-8f, 8f);
@@ -65,21 +62,6 @@ public class RandomisePickup : MonoBehaviour
         if (randomValue == 1)
         {
             GameObject newObj = Instantiate(prefabObj02, new Vector3(x, y, 0f), Quaternion.identity);
-            newObj.transform.parent = this.transform;
-        }
-        if (randomValue == 2)
-        {
-            GameObject newObj = Instantiate(prefabObj03, new Vector3(x, y, 0f), Quaternion.identity);
-            newObj.transform.parent = this.transform;
-        }
-        if (randomValue == 3)
-        {
-            GameObject newObj = Instantiate(prefabObj04, new Vector3(x, y, 0f), Quaternion.identity);
-            newObj.transform.parent = this.transform;
-        }
-        if (randomValue == 4)
-        {
-            GameObject newObj = Instantiate(prefabObj05, new Vector3(x, y, 0f), Quaternion.identity);
             newObj.transform.parent = this.transform;
         }
     }

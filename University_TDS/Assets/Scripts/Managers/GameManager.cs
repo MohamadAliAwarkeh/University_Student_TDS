@@ -29,13 +29,12 @@ public class GameManager : MonoBehaviour
 
     //Private Variables
     private float timer;
-    private bool pauseMenuActive;
+    private bool pauseMenuActive = false;
 
     private void Start() => timer = timeBetweenWaves;
 
     private void Update()
     {
-        //Call functions
         PauseMenu();
 
         //Handles game states
@@ -55,10 +54,6 @@ public class GameManager : MonoBehaviour
                 DisplayEndlessPanel();
                 Reset();
                 break;
-
-            case GameState.Pause:
-                Reset();
-                break;
         }
 
         //Handles game modes
@@ -76,24 +71,28 @@ public class GameManager : MonoBehaviour
                 //Endable endless mode text
                 endlessTimerText.SetActive(true);
                 break;
-        }
+        }     
     }
 
     private void GameCountdown()
     {
-        //Set text to display countdown
-        timerText.gameObject.SetActive(true);
-        timerText.SetText(timer.ToString("#"));
-        //Counts down
-        timer -= Time.deltaTime;
-        //If timer reaches 0, then...
-        if (timer <= 0)
+        if (gameState == GameState.MainMenu)
         {
-            //Disable text
-            timerText.gameObject.SetActive(false);
-            //Change state
-            gameState = GameState.InProgress;
+            //Set text to display countdown
+            timerText.gameObject.SetActive(true);
+            timerText.SetText(timer.ToString("#"));
+            //Counts down
+            timer -= Time.deltaTime;
+            //If timer reaches 0, then...
+            if (timer <= 0)
+            {
+                //Disable text
+                timerText.gameObject.SetActive(false);
+                //Change state
+                gameState = GameState.InProgress;
+            }
         }
+        
     }
 
     #region Panel Functions

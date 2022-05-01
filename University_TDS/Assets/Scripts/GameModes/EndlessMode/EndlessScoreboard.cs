@@ -24,16 +24,9 @@ public class EndlessScoreboard : MonoBehaviour
     {
         if (gameManager.gameState == GameState.InProgress)
         {
-            if (gameManager.gameMode == GameMode.None)
-            {
-                //Do nothing
-            }
-            else if (gameManager.gameMode == GameMode.EndlessMode)
-            {
-                //Call functions
-                GameTimer();
-                EndGamePanelDisplay();
-            }
+            //Call functions
+            GameTimer();
+            EndGamePanelDisplay();
         }
     }
 
