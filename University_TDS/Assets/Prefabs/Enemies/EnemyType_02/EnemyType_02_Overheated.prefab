@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 445274905
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
@@ -151,9 +151,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 445274905
-  m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 0cd502443db0eee41be30a8e410e95e2, type: 3}
   m_Color: {r: 1, g: 0, b: 0.2, a: 0.6862745}
   m_FlipX: 0
@@ -315,8 +315,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 445274905
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0c7c1935f56230b4ea8fbe91cacf02ba, type: 3}
   m_Color: {r: 1, g: 0, b: 0.2, a: 0.6862745}
@@ -412,8 +412,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 445274905
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 21c2ed325fdf9924997076bda8f8a471, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -512,6 +512,14 @@ PrefabInstance:
     - target: {fileID: 2631913381609789360, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
       propertyPath: m_Name
       value: SniperWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019918981782694776, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019918981782694776, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6290268213272370468, guid: 985a9390def8c554ab2cdf0647b18af7, type: 3}
       propertyPath: enemyController
