@@ -46,8 +46,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -98,6 +96,9 @@ MonoBehaviour:
   bulletDamage: 2
   bulletSpeed: 15
   bulletRange: 3
-  bulletHitVFX: {fileID: 5840768962638652822, guid: 2b82e9f1ce7b15b4fba62f426fe3af1b, type: 3}
+  bulletHitVFX: {fileID: 5840768962638652822, guid: 2b82e9f1ce7b15b4fba62f426fe3af1b,
+    type: 3}
+  standardColour: {r: 1, g: 1, b: 1, a: 1}
+  destroyedColour: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
   mySR: {fileID: 0}
   playerCol: {fileID: 0}
