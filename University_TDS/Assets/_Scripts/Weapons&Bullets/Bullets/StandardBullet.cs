@@ -25,6 +25,8 @@ public class StandardBullet : Bullet
 
     public override void Update()
     {
+        Debug.Log(bulletDamage);
+
         if (gameManager.gameState == GameState.InProgress)
         {
             //Get parent info

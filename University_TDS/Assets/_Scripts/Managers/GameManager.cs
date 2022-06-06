@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
             pauseMenuActive = !pauseMenuActive;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && gameState == GameState.Pause)
             SceneManager.LoadScene(0);
 
         if (pauseMenuActive && gameState == GameState.InProgress)

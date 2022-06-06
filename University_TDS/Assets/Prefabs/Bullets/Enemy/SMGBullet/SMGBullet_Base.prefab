@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946400449267118325}
-  m_LocalRotation: {x: 0, y: 0, z: 0.07058257, w: 0.99750596}
+  m_LocalRotation: {x: 0, y: 0, z: 0.12435043, w: 0.99223834}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -102,4 +102,5 @@ MonoBehaviour:
   destroyedColour: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
   raritySR: {fileID: 0}
   mySR: {fileID: 0}
+  bulletState: 0
   playerCol: {fileID: 0}

@@ -156,16 +156,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aacd71edddafcc4fb9d6bcdefcf9438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 2
   explosionVFX: {fileID: 8560193018011054886, guid: 8c2a78817aa51c24399adfd582c7148b,
     type: 3}
   hasRarityBorder: 0
+  hasMultipleWeapons: 0
   destroyedColour: {r: 0.25, g: 0.25, b: 0.25, a: 1}
   enemyController: {fileID: 1483042705}
   bodySR: {fileID: 9017781306331782976}
   weaponSR: {fileID: 8217749779771819778}
+  weaponSR2: {fileID: 0}
   bodyRaritySR: {fileID: 0}
   weaponRaritySR: {fileID: 0}
+  weaponRaritySR2: {fileID: 0}
 --- !u!1 &7285574944257835190
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,11 +316,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6290268213272370468, guid: 985a9390def8c554ab2cdf0647b18af7,
-        type: 3}
-      propertyPath: enemyController
-      value: 
-      objectReference: {fileID: 1483042705}
     - target: {fileID: 6019918981782694776, guid: 985a9390def8c554ab2cdf0647b18af7,
         type: 3}
       propertyPath: m_SortingOrder
@@ -328,6 +326,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6290268213272370468, guid: 985a9390def8c554ab2cdf0647b18af7,
+        type: 3}
+      propertyPath: enemyController
+      value: 
+      objectReference: {fileID: 1483042705}
     - target: {fileID: 1376142907515354610, guid: 985a9390def8c554ab2cdf0647b18af7,
         type: 3}
       propertyPath: enemyController

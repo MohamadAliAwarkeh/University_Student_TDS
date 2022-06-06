@@ -18,6 +18,8 @@ public class EndlessScoreboard : MonoBehaviour
     [HideInInspector] public float onGoingGameTimer;
     [HideInInspector] public int enemiesDestroyed;
 
+    private string currentTimer;
+
     private void Start() => gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     private void Update()
@@ -25,8 +27,8 @@ public class EndlessScoreboard : MonoBehaviour
         if (gameManager.gameState == GameState.InProgress)
         {
             //Call functions
-            GameTimer();
             EndGamePanelDisplay();
+            GameTimer();
         }
     }
 
@@ -38,14 +40,14 @@ public class EndlessScoreboard : MonoBehaviour
         float minutes = Mathf.FloorToInt(onGoingGameTimer / 60);
         float seconds = Mathf.FloorToInt(onGoingGameTimer - minutes * 60);
         //Set text to visualise time
-        string timer = string.Format("{0:0}:{1:00}", minutes, seconds);
-        onGoingGameText.SetText(timer);
+        currentTimer = string.Format("{0:0}:{1:00}", minutes, seconds);
+        onGoingGameText.SetText(currentTimer);
     }
 
     private void EndGamePanelDisplay()
     {
         //Set texts
-        suriviedForText.SetText("You Survived For: " + onGoingGameText.text);
+        suriviedForText.SetText("You Survived For: " + currentTimer);
         enemiesKilledText.SetText("Enemies Killed: " + enemiesDestroyed.ToString());
     }
 }
